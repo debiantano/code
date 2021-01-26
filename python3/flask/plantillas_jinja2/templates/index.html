@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+	<div>
+		<p>{{ message }}</p>
+		<p>Contactos</p>
+		<ul>
+			{% for contact in contacts %}
+		<li>{{ contact }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}
