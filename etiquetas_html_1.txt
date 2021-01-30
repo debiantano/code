@@ -1,0 +1,22 @@
+# NEGRITA
+<strong>Texto en negrita</strong>
+
+# CURSIVA
+<em>texto en cursiva</em>
+
+# SUBRAYADO
+<u>texto subrayado</u>
+
+# CENTRADO
+<center>Texto centrado</center>
+
+# SALTO DE LINEA
+<br>
+
+# LINEA HORIZONTAL
+<hr>
+
+# TEXTO COLORIZADO
+<p style="color:#FF0000";>texto en rojo</p>
+<span class="color-blue">color azul</span>
+
