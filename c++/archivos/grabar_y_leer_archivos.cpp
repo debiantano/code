@@ -30,7 +30,7 @@ int main(){
 	// Operar, leer los registros del archivo
 	
 	getline(Lectura,nombre);
-		while(!Lectura.eof()){
+	while(!Lectura.eof()){
 		getline(Lectura,direccion);
 		getline(Lectura,dni);
 		
