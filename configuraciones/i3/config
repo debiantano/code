@@ -1,0 +1,190 @@
+
+# i3 config file (v4)
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod Mod4
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+#font pango:monospace 10
+font pango: Hack Nerd Font Regular 9
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+#font pango:DejaVu Sans Mono 8
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
+
+# Use pactl para ajustar el volumen en PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Use Mouse + $mod para arrastrar ventanas flotantes a su posición deseada
+floating_modifier $mod
+
+# iniciar una terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal
+
+# matar ventana enfocada
+bindsym $mod+w kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec rofi -show run
+# There also is the (new) i3-dmenu-desktop which only displays applications
+
+# alternativamente, puede utilizar las teclas del cursor
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+#Alternar los paneles
+# alternativamente, puede utilizar las teclas del cursor:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# dividido en orientación horizontal
+bindsym $mod+h split h
+
+# dividido en orientación vertical
+bindsym $mod+v split v
+
+# ingrese al modo de pantalla completa para el contenedor enfocado
+bindsym $mod+f fullscreen toggle
+
+# cambiar el diseño del contenedor (apilado, con pestañas, alternar división)
+	#bindsym $mod+s layout stacking
+	#bindsym $mod+w layout tabbed
+	#bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+s floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# enfocar el contenedor padre
+	#bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1:   "
+set $ws2 "2:   "
+set $ws3 "3:   "
+set $ws4 "4:   "
+set $ws5 "5:   "
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace	         爵  
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+q exec i3-msg exit
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # Estos enlaces se activan tan pronto como ingresa al modo de cambio de tamaño
+        bindsym Left resize shrink width 3 px or 3 ppt
+        bindsym Down resize grow height 3 px or 3 ppt
+        bindsym Up resize shrink height 3 px or 3 ppt
+        bindsym Right resize grow width 3 px or 3 ppt
+
+        # volver a la normalidad: Enter o Escape o $ mod + r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+# Resizeado
+bindsym $mod+r mode "resize"
+
+# Inicie i3bar para mostrar una barra de espacio de trabajo (más la información del sistema i3status
+# averigue si esta disponible)
+bar {
+		position top
+		height 25
+        status_command i3blocks
+		
+        colors {
+			background #000000
+			separator  #000000
+			#					border	backr	text
+			focused_workspace	#000000	#106d5d	#ffffff
+			active_workspace	#000000	#4f676a	#ffffff
+			inactive_workspace	#333333	#222222	#888888
+			urgent_workspace	#2f343a	#900000	#ffffff
+        }
+}
+client.focused	#ff7800	#52febf	#000000	#52febf
+
+# margenes de los paneles 0 7
+gaps outer 0
+gaps inner 9
+
+# enfoque del mouse
+focus_follows_mouse none
+
+# quitar el titulo
+for_window [class="^.*"] border pixel 1
+
+#abrir aplicaciones en un escritorio en concreto
+assign [class="Cherrytree"]  $ws2
+assign [class="Firefox-esr"] $ws3
+assign [class="burp-StartBurp"]  $ws4
+
+#Ejecutar siempre esta orden
+exec feh --bg-fill /home/noroot/Imágenes/mac.png &
+exec compton --config /home/noroot/.config/i3/compton.conf &
+exec xfce4-clipman &
+
+#SCREENSHOT
+bindsym Shift+Print	exec xfce4-screenshooter -cr
+bindsym Print exec xfce4-screenshooter -r -s /home/noroot/km4l30n/git/debiantano.github.io/assets
+
+# A BRIr VENTANA EN MODO FLOTANTE
+for_window [class="feh"] floating enable
+for_window [class="burp-StartBurp"] floating enable
