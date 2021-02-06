@@ -1,3 +1,7 @@
+# AÑADIR IMAGENES
+<img src="img/dinosaurio.jpg">
+<img src="https://example.com//dinosaurio.jpg">
+
 # NEGRITA
 <strong>Texto en negrita</strong>
 
