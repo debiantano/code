@@ -1,0 +1,22 @@
+
+# MOSTRAR IMAGENES
+docker images
+
+# ELIMINAR IMAGEN
+docker rmi flaskapp
+
+# EJECUTAR EN MODO INTERACTIVO (-it) ESPECIFICMENTE EJECUTE EL SHELL DE ESTE SISTEMA
+docker run -it flaskapp /bin/sh
+
+# CREAR NUESTRA IMAGEN
+docker build -t flaskapp .
+
+# EJECUTAR COMO UN PROCESO
+docker run -it -p 7000:4000 -d flaskapp
+
+# VER LOS PROCESOS Q ESTAN EN EJECUCION
+docker container ls <> docker ps
+
+# DE TENER UN ID
+docker stop 0ce5b7642e84 
+

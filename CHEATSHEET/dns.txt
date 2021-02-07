@@ -1,0 +1,6 @@
+
+# DNSRECON
+dnsrecon -d webmaster.hmv -n webmaster.hmv -t zonewalk
+
+# DIG
+dig axfr @192.168.0.107 webmaster.hmv

@@ -1,0 +1,6 @@
+
+# DESINSTALAR PAQUETES :DEB
+dpkg -r nombre_del_paquete.deb
+
+
+

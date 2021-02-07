@@ -1,0 +1,18 @@
+
+# WFUZZ
+wfuzz -c --hc=404 -w /usr/share/wordlists/dirb/common.txt http://192.168.0.101
+wfuzz -c --hc=404 -z file/dict1.txt -f -z file,dict2.txt http://192.168.0.101/FUZZ/FUZ2Z
+wfuzz -c --sc=200 -w /usr/share/wordlists/dirb/common.txt http://192.168.0.101/FUZZ
+
+# DIRSEARCH
+dirsearch -u 192.168.0.109 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 50 -e php,txt,html -f
+
+# FFUF
+ffuf -w /usr/share/wordlists/dirb/common.txt -u http://blog.thm/FUZZ
+
+# GOBUSTER
+gobuster dir -q -f -t 30 -u http://192.168.0.102 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt
+gobuster dir -e -w /usr/share/wordlists/dirb/common.txt -u http://192.168.0.103 -x php,html,txt 
+
+# DIRB
+dirb http://192.168.0.103 /usr/share/wordlists/dirb/big.txt -X .php | tee dirb.log

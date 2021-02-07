@@ -1,0 +1,4 @@
+# CVE 2019-8943
+WordPress a traves de 5.0.3 permite Path Traversal en wp_crop_image(), Un atacante (que tiene privilegios de recortar una imagen) 
+puede escribir la imagen de salida en un directorio arbitrario mediante un nombre de archivo que contenga dos extensiones de imagen
+ y secuencias ../, como un nombre de archivo que termine con jpg? /../../ subcadena file.jpg

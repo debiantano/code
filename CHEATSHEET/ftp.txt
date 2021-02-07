@@ -1,0 +1,5 @@
+
+# SERVICIO FTP
+wget -r --no-passive --no-parent ftp://anonymous:cualquierCosa@192.168.0.109
+wget -m ftp://anonymous:cualquierCosa@192.168.0.109
+ftp 192.168.0.109
