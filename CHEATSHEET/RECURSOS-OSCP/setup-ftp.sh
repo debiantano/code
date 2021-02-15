@@ -7,5 +7,5 @@ pure-pw mkdb
 cd /etc/pure-ftpd/auth/
 ln -s ../conf/PureDB 60pdb
 mkdir -p /ftphome
-chown -R ftpuserftrpgroup /ftphome/
+chown -R ftpuser:ftpgroup /ftphome/
 systemctl restart pure-ftpd
