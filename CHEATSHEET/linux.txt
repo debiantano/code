@@ -1,3 +1,9 @@
+# ---------------SCIPTING-----------------
+echo "I need to try hard" | sed 's/hard/harder/'
+echo "I hack binaries,web apps,mobile apps, and just about anything else" | cut -f 2 -d ","
+cut -d ":" -f 1 /etc/passwd 
+ echo "hello::there::friend" | awk -F "::" '{print $1, $3}' 
+
 
 # DESINSTALAR PAQUETES :DEB
 dpkg -r nombre_del_paquete.deb
