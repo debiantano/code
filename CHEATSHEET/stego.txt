@@ -1,6 +1,0 @@
-
-# EXTRAER INFORMACION INCRUSTADO
-steghide extract -sf file.jpg
-
-#COMPROBAR SI HAY UN ESTENOGRAFO INCRUSTADO
-steghide --info Alice-White-Rabbit.jpg

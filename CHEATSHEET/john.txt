@@ -1,6 +1,0 @@
-
-# NTLM
-john --wordlist=/usr/share/wordlists/rockyou.txt hash.ntlm --format=nt
-
-# MD5
-john --show hash.md5 --format=raw-md5

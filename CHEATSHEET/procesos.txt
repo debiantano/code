@@ -1,6 +1,0 @@
-
-# MATAR UN PROCESO PID
-kill -9 $PID
-
-# ENLACE SIMBOLICO
-ln -s [target file] [Symbolic filename]

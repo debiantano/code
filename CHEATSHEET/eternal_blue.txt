@@ -1,6 +1,0 @@
-
-# ENUMERACION
-nmap -p445 --script="smb-vuln*" 10.10.152.135
-
-# RDESKTOP
-rdesktop 10.10.152.135 -g90% -u Jon -p alqfna22
