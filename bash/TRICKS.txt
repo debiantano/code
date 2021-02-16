@@ -1,0 +1,2 @@
+# BUCLE FOR
+for ip in $(seq 1 10); do echo "10.10.10.$ip"; done
