@@ -1,0 +1,9 @@
+
+# FUZZING A PLUGINS
+wfuzz -c -t 400 --hc=404 -w wp-plugins.fuzz.txt http://192.168.0.101/h3l105/FUZZ
+
+# PLUGINS VULNARABLES
+wpscan --url http://192.168.0.101/h3l105/ -e vp | tee wpscan.log
+
+# ENUMERACION
+python wpseku.py --target http://192.168.0.101/h3l105/
