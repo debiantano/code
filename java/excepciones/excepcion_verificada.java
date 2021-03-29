@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class errores {
     public static void main(String[] args) throws FileNotFoundException, IOException {
         // EXCEPCIONES VERIFICADAS (IOException)
+        //java te obliga a solucionarlas
+        
         // LECTURA DE UN ARCHIVO DE TEXTO
          BufferedReader bf = new BufferedReader(new FileReader("d:\\test.txt"));
          String cadena;
