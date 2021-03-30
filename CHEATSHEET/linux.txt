@@ -8,5 +8,5 @@ cut -d ":" -f 1 /etc/passwd
 # DESINSTALAR PAQUETES :DEB
 dpkg -r nombre_del_paquete.deb
 
-
-
+# CAPTURAR NOMBRE DE UN APLICATIVO EJECUTADO
+xprop WM_CLASS
