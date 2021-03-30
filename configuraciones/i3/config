@@ -181,10 +181,15 @@ exec feh --bg-fill /home/noroot/Imágenes/mac.png &
 exec compton --config /home/noroot/.config/i3/compton.conf &
 exec xfce4-clipman &
 
+# PORTAPAPELES BIDIRECCIONAL
+# sudo apt install open-vm-tools-desktop
+exec vmware-user-suid-wrapper
+
+
 #SCREENSHOT
 bindsym Shift+Print	exec xfce4-screenshooter -cr
 bindsym Print exec xfce4-screenshooter -r -s /home/noroot/km4l30n/git/debiantano.github.io/assets
 
-# A BRIr VENTANA EN MODO FLOTANTE
+# ABRIR VENTANA EN MODO FLOTANTE
 for_window [class="feh"] floating enable
 for_window [class="burp-StartBurp"] floating enable
