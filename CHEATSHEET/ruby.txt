@@ -1,0 +1,3 @@
+
+# MODO INTERACTIVO
+irb

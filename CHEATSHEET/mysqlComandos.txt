@@ -1,4 +1,13 @@
 
+# VER TODOS LOS USUARIOS DE MYSQL
+SELECT user FROM mysql.user;
+
+# EXPORTAR UNA BASE DE DATOS
+mysqldump -u root -p seth > seth.sql
+
+# IMPORTAR UNA BASE DE DATOS (PeVIAMENTE CREADA)
+mysql -u noroot -p seth < seth.sql
+
 #---------------------------USUARIOS Y PERMISOS-----------------------------------
 # USUARIO ACTUAL
 SELECT current_user();
@@ -12,7 +21,7 @@ SHOW GRANTS FOR 'noroot'@'localhost';
 # OTORGAR TODOS LOS PERMISOS
 GRANT ALL PRIVILEGES ON *.* TO 'newUser'@'localhost';
 
-# CRAGAR TODOS LOS PRIVILEGIOS
+# CARGAR TODOS LOS PRIVILEGIOS
 FLUSH PRIVILEGES;
 
 # PROPORCIONAR PERMISOS
@@ -21,7 +30,6 @@ GRANT ALL PRIVILEGES On wordpress.* TO wordpress@localhost;
 
 # ELIMINAR USUARIO
 DROP USER 'newUser'@'localhost';
-
 
 # ELIMINAR TODOS LOS REGISTROS DE UNA TABLA
 TRUNCATE contacts;
@@ -55,6 +63,8 @@ auto_increment						  // incrementar en 1
 comment								  // comentario
 varchar (x)							  // cadena con x de longitud
 primary key (campo q va a tener la CP)// clave primaria
+CREATE TABLE Alumnos(id int(2), username varchar(32), password varchar(32), contacto varchar(32));
+
 
 # MOSTRAR TABLAS
 SHOW TABLES;

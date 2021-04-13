@@ -1,0 +1,11 @@
+
+#NUMEARION DESHABILITADA
+ctrl+3 + shift+3
+
+# GUARDAR
+ctrl+o
+
+# BUSCAR
+ctrl+w
+
+

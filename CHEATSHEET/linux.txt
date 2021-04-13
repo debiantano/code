@@ -1,12 +1,65 @@
-# ---------------SCIPTING-----------------
-echo "I need to try hard" | sed 's/hard/harder/'
-echo "I hack binaries,web apps,mobile apps, and just about anything else" | cut -f 2 -d ","
-cut -d ":" -f 1 /etc/passwd 
- echo "hello::there::friend" | awk -F "::" '{print $1, $3}' 
 
+# COMPROBAT LA INTEGRIDAD DE LOS DATOS DIGITALES
+md5sum file.txt
 
-# DESINSTALAR PAQUETES :DEB
+# CONVERSOR DE FORMATO DE ARCHIVO DE TEXTO DE DOS/MAC A UNIX
+dos2unix lxd.sh
+
+# EJECUTAR COMO OTRO USUARIO
+sudo -u#33 /bin/bash
+
+# DESINSTALAR DPKG
+dpkg -r bat
+
+# GENERAR CONTRASEÑA
+openssl passwd admin123
+
+# CEWL
+cewl -w diccionario.txt http://192.168.0.105/ 
+
+# FORMATO XML A HTML
+xsltproc targeted.xml -o targeted.html
+
+# DESCARGA NODE
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt install nodejs npm -y
+
+# ENLACE SIMBOLICO
+sudo ln -s ~/km4l30n/tools/dirsearch/dirsearch.py /bin/dirsearch
+
+# MATAR EL PROCESO ANTERIOR
+kill %
+
+# DESCARGA CON WGET
+wget https://github.com/vulhub/vulhub/archive/master.zip -O vulhub-master.zip
+
+# DESCUBRIR IP
+for url in $(cat list.txt); do host $url;done	
+
+# DESINSTALAR PAQUETES .DEB
 dpkg -r nombre_del_paquete.deb
 
-# CAPTURAR NOMBRE DE UN APLICATIVO EJECUTADO
+# CAPTURAR NOMBRE DEL PROGRAMA EJECUTADO
 xprop WM_CLASS
+
+# INICIAR SERVICIO CON ARRANQUE DEL SISTEMA
+systemctl enable ssh
+
+# LIMPIAR EL CACHË DE APT
+apt-get autoclean
+
+# ELIMINAR COMPLETAMENTE EL CACHË
+apt-get clean
+
+# CONVERTIR A HEXADECIMAL
+echo "cadena" | xxd -ps
+
+# ELIMINAR LINEAS VACIAS CON GREP
+grep "href" index.html | grep "\.megacorpone" | grep -v "www\.megacorpone\.com" | awk -F "http://" '{print $2}' | cut -d "/" -f 1 | grep -v '^$'
+
+# ENVOLVER UNA CADENA DEFINIDA
+grep -o "[^/]*\.megacorpone\.com" index.html | sort -u 
+
+# ELIMINAR LINEAS VACIAS CON GREP
+grep "href" index.html | grep "\.megacorpone" | grep -v "www\.megacorpone\.com" | awk -F "http://" '{print $2}' | cut -d "/" -f 1 | awk /./
+

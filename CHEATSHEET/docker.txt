@@ -1,4 +1,14 @@
 
+# CONSTRUIR DOCKERFILE
+docker build -t ubuntu_32bits /home/noroot/boxes/others/bufferOverflow/dockerfile/
+
+# UBUNTU 32 BITS (DOCKERFILE CREATE)
+apt update
+apt install gcc
+apt install nano
+apt install file
+apt install xclip
+
 # MOSTRAR IMAGENES
 docker images
 
@@ -12,6 +22,7 @@ docker run -it flaskapp /bin/sh
 docker build -t flaskapp .
 
 # EJECUTAR COMO UN PROCESO
+-d :2do plano
 docker run -it -p 7000:4000 -d flaskapp
 
 # VER LOS PROCESOS Q ESTAN EN EJECUCION
@@ -19,4 +30,6 @@ docker container ls <> docker ps
 
 # DE TENER UN ID
 docker stop 0ce5b7642e84 
+
+
 

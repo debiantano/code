@@ -7,3 +7,5 @@ portfwd add -l 8081 -p 8080 -r 127.0.0.1
 
 # SSH
 ssh -L 8081:localhost:8080 -N -f -l noroot 192.168.0.109
+
+

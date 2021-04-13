@@ -1,0 +1,3 @@
+
+# ESRILO DE ESALTADO DE SINTAXIS
+pandoc --list-highlight-styles

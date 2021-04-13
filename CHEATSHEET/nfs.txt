@@ -1,0 +1,13 @@
+
+# SCRIPTS CON NMAP
+for script in $(locate .nse | grep nfs | tr "/" " " | awk 'NF{print $NF}'); do echo -e "[+] Probando con script $script:\n";nmap 
+--script=$script -p111 10.10.47.73; done
+
+# MONTAR UN SISTEMA DE ARCHIVOS
+sudo mount 10.10.47.73:/var /tmp/montura
+sudo -t nfs mount 10.10.47.73:/var /tmp/montura
+
+# MOSTRAR INFORMACION DE MONTAJE
+showmount -e 10.10.47.73
+
+

