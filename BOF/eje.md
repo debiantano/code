@@ -1,6 +1,6 @@
 # Explotando el Buffer Overflow basado en pila (linux)
 
-- [Antecedentes](#Antecedente)
+- [Antecedentes](#Antecedentes)
 - [Creacion del script en C](#creando-script-en-c)
 
 #include<stdio.h>
@@ -76,9 +76,10 @@ asdfgh
 sdfgh
 sdfgh
 
-Creando script en C
-sdfg
-wert
+## Creando script en C
+sdffgdfdfv
+
+wertsdfghjkjytrtd
 sdfg
 rty
 rt
