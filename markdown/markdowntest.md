@@ -55,6 +55,15 @@ int main(){
 |fila2     |elemento 2 |pera       |
 |fila3     |elemento 3 |granadilla |
 
+| Parámetro | Descripción   |
+| ----------|:------------- |
+| -p        | Escaneo de los puertos obtenidos                       |
+| -sC       | Muestra todos los scripts relacionados con el servicio |
+| -sV       | Nos permite ver la versión del servicio                |
+| -oN       | Guarda el output en un archivo                         |
+
+
+
 
 ![visual studio code logo](https://upload.wikimedia.org/wikipedia/commons/2/2d/Visual_Studio_Code_1.18_icon.svg)
 
