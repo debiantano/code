@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# sudo nvim /usr/share/xsessions/qtile.desktop
 import os
 import re
 import socket
