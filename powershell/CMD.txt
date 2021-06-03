@@ -1,3 +1,10 @@
+
+# VER LOS PUERTOS ABIERTOS EN WINDOWS
+netstat -ano | findstr TCP | findstr "LISTENING"
+
+# VER EL PROCESO QUE SE EJECUTA EN UN PID
+tasklist /v | findstr 7608
+
 # MATAR UN PID
 taskkill /pid 10720 /F
 
