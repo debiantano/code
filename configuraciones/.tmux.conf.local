@@ -1,4 +1,17 @@
+######################################################################################################
+# Ademas de Ctrl+A, agregamos un atajo de teclado tipo screen (Ctrl+A)
+# Para tmux < 1.6:
+set-option -g prefix C-a
 
+# Para tmux >= 1.6:
+#set-option -g prefix C-a
+#set-option -g prefix2 C-b
+
+# Empezar la numeración de las ventanas creadas en 1 (la primera ventana)
+set -g base-index 1
+
+
+#####################################################################################################
 # 173-color green Acuarela
 
 # -- windows & pane creation ---------------------------------------------------
