@@ -9,4 +9,4 @@ flask run
 ```
 [https://davidhamann.de/2020/04/05/exploiting-python-pickle/]
 
-![image..png](image.png)
+![image..png](image/image.png)
