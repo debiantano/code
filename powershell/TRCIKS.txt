@@ -1,3 +1,7 @@
+ 
+ # DECODIFICAR BASE64
+ [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("YmxhaGJsYWg="))
+
 # RECORRER UN ARRAY
 (902, 22, 80, 135, 445) | %{ echo $_ }
 
