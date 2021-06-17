@@ -1,4 +1,17 @@
 
+# Inciar ambos servicios
+\xampp\xampp_start.exe
+# Detener los servicios de MySql y Apache
+\xampp\xampp_stop.exe
+# Iniciar Apache
+\xampp\apache_start.bat
+# Apagar Apache
+\xampp\apache_stop.bat
+# Iniciar MySql
+\xampp\mysql_start.bat
+# Detener MySql
+\xampp\mysql_stop.bat
+
 # CONECTAR A MYSQL CON CMD
 C:\xampp\mysql\bin>mysql.exe -u noroot -p
 
