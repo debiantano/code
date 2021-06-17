@@ -1,4 +1,7 @@
 
+# CONECTAR A MYSQL CON CMD
+C:\xampp\mysql\bin>mysql.exe -u noroot -p
+
 # LISTAR ARCHIVOS OCULTOS
 dir /a
 
