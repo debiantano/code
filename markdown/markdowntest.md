@@ -30,11 +30,11 @@ este es un ~~texto tachado~~
 
 [debiantano.com](https://debiantano.github.io/blog3 "custon title")
 
-> this is a quote 
-> this is a quote 
-> this is a quote 
-> this is a quote 
-> this is a quote 
+> this is a quote  
+> this is a quote  
+> this is a quote  
+> this is a quote  
+> this is a quote  
 ---
 ___
 
