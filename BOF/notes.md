@@ -1,5 +1,5 @@
 
-# Generar cadena bytearray
+## BYTEARRAY
 ```pip install badchars```
 ```badchars -f python```
 
