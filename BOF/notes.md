@@ -2,7 +2,7 @@
 #### Configurar carpeta de trabajo
 ```!mona -set workingfolder C:\Users\win7bits\Desktop\%p```
 #### Generar badchars
-```!mona bytearray -b "\x00"```
+```!mona bytearray -b "\x00"```   
 ```!mona bytearray -b "\x00\x07"```
 #### Comparar haciendo referencia al bytearray que generó y la dirección a la que apunta ESP
 ```!mona compare -f C:\mona\appname\bytearray.bin -a <address>```
