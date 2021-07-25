@@ -12,7 +12,7 @@
 #### Comparar haciendo referencia al bytearray que generó y la dirección a la que apunta ESP
 ```!mona compare -f C:\mona\appname\bytearray.bin -a <address>```
 #### Encontrar el punto de salto
-```!mona jmp -r esp -cpb \x07\x2e\xa0\x00"```
+```!mona jmp -r esp -cpb \x07\x2e\xa0\x00"```   
 ```!mona jmp -r esp -cpb "\x00"```
 
 ## SHELLCODE
