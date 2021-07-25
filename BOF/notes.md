@@ -1,6 +1,6 @@
 ## MONA
 #### Configurar carpeta de trabajo
-```!mona -set workingfolder C:\Users\win7bits\Desktop\%p```
+!mona -set workingfolder C:\Users\win7bits\Desktop\%p
 #### Generar badchars
 !mona bytearray -b "\x00"
 !mona bytearray -b "\x00\x07"
