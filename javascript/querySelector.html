@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>QuerySelector</title>
+    </head>
+    <body>
+        <a href="www.google.com">www.google.com</a><br>
+        <a href="www.youtube.com" class="miLiknk">www.youtube.com</a><br>
+        <a href="debiantano.github.io" class="miLink">debiantano.github.io</a><br>
+
+        <button onclick="myFunction();" >Hazme click</button>
+
+        <script type="text/javascript">
+            // QuerySelector
+            function myFunction(){
+                var elemento = document.querySelector(".miLink");
+                elemento.style.background="yellow";
+                elemento.style.border="2px solid green";
+            }
+        </script>
+
+    </body>
+</html>
