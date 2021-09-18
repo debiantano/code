@@ -1,4 +1,0 @@
-zone "dns.challenge" {
-    type master;
-    file "/etc/bind/zone.db";
-};
