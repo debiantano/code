@@ -1,0 +1,3 @@
+
+# RECORTE 
+scrot -s $PWD/1.png

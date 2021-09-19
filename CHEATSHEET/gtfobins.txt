@@ -1,0 +1,3 @@
+
+# VIM-VI
+sudo vim -c ':!/bin/bash

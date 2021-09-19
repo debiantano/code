@@ -1,0 +1,3 @@
+
+db_name="security".encode('utf-8')
+db_name.hex()

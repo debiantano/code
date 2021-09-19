@@ -1,0 +1,24 @@
+
+# DATA INTERNA
+curl -s "http://192.168.166.128/index.php" | grep -oP 'k".*?<' | awk "NR==3" | grep -oP ">.*?<" | tr -d "<>"
+
+# BUCLE FOR 
+for i in $(seq 1 5); do curl -s -H "Cookie: security=low; PHPSESSID=d016fb7232560a209e4c82f4604f3d2c" "http://192.168.0.105/dvwa/vulnerabilities/sqli/?id=$i&Submit=Submit" | grep "First name" | awk '{print $3,$4}' | cut -d "<" -f 1; done
+
+
+cat audit.log | grep -oP "cmd=.*"
+cat audit.log | grep -oP "cmd=.*" | grep -v "list" | awk '{print $2}' FS="="
+cat audit.log | grep -oP "cmd=.*" | grep -v "list" | awk '{print $2}' FS="=" | sed 's/ terminal//'
+for hex in $(cat audit.log | grep -oP "cmd=.*" | grep -v "list" | awk '{print $2}' FS="=" | sed 's/ terminal//'); do echo -e "\n[*] Cadena $hex:\n"; echo $hex | xxd -ps -r;echo; sleep 2; done
+cat audit.log.3 | grep -oP "cmd=.*" | grep -v "bash" | awk '{print $2}' FS="=" | sed 's/ terminal//' | xxd -ps -r
+
+# NSE SCRIPTS
+locate .nse | xargs grep "categories"
+locate .nse | xargs grep "categories" | grep -oP '".*?"'
+locate .nse | xargs grep "categories" | grep -oP '".*?"' | sort -u | wc -l
+
+
+
+-o : Imprima solo las partes coincidentes (no vacías) de una línea coincidente, con cada parte en una línea de salida separada
+-P : Interprete PATRONES como expresiones regulares compatibles con Perl (PCRE)
+-c : numero de coincidencias

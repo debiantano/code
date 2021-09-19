@@ -1,0 +1,6 @@
+
+# TAR
+tar -xf wordpress-5.6.tar.gz
+
+# ZIP
+7z x 8782.zip

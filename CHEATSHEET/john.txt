@@ -1,0 +1,10 @@
+
+# NTLM
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.ntlm --format=nt
+
+# MD5
+john --wordlist=/usr/share/wordlists/rockyou.txt hash --format=Raw-MD5
+john --show hash.md5 --format=raw-md5
+
+# ZIP
+zip2john 8702.zip > hash_zip

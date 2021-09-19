@@ -1,0 +1,3 @@
+
+# ARQUITEXTURA DEL OS
+uname -a 

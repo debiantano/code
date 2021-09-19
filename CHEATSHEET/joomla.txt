@@ -1,0 +1,6 @@
+
+# USERS
+joomla
+
+# ESCANEO
+joomscan -u http://192.168.0.106

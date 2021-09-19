@@ -1,0 +1,2 @@
+# JUICY POTATO
+SeImpersonatePrivilege 		->		Enable
