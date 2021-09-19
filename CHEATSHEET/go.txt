@@ -1,5 +1,0 @@
-
-# CONSTRUIR EJECUTABLE
-go build .
-go build -ldflags "-s -w" .
-upx brute tcping

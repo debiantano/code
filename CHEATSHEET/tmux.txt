@@ -1,3 +1,0 @@
-
-# MOVER PANEL 4 A PANEL 1
-:join-pane -s cuatro -t uno
