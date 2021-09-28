@@ -10,26 +10,38 @@ purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 
+ip=$1
+
 # ESCANEO GREPEABLE
 echo -e "\n${greenColour}sudo nmap -p- --open -sS -Pn -n --min-rate 5000 -vvv $1 -oG allPorts${endColour}"
-sudo grc nmap -p- --open -sS -Pn -n --min-rate 5000 -vvv $1 -oG allPorts
+sudo grc nmap -p- --open -sS -Pn -n --min-rate 5000 -vvv $ip -oG allPorts
 
 ports="$(/usr/bin/cat allPorts | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
+declare -a array_ports="( $(/usr/bin/cat allPorts | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/'| xargs) )"
 ip_address="$(cat allPorts | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
 
 sleep 1
 # EXTRAYENDO INFORMACION
-echo -e "\n\n\n---------------------------------------"
+echo -e "\n\n\n-------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 echo -e "${yellowColour}[*] Extracting information...${endColour}\n"
 echo -e "\t${yellowColour}[*]${endColour} ${grayColour}IP Address: $ip_address${endColour}"
 echo -e "\t${yellowColour}[*]${endColour} ${grayColour}Open ports: $ports${endColour}\n"
-echo -e "---------------------------------------\n\n"
+echo -e "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n"
+
+# ESCANEO UDP
+# nmap -sU -p- --min-rate 10000 -oN udpScan $ip
+
 
 # ESCANEO COMPLETO
-echo -e "\n${greenColour}nmap -p${ports} -sC -sV ${ip_address} -oN targeted${endColour}"
-sudo grc nmap -p${ports} -sC -sV ${ip_address} -oN targeted
+echo -e "\n${greenColour}nmap -p${ports} -sC -sV -Pn ${ip_address} -oN targeted${endColour}"
+sudo grc nmap -p${ports} -sC -sV -Pn ${ip_address} -oN targeted
 
-
+echo -e "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 # WHATWEB
-echo -e "\n\n\n"
-whatweb http://192.168.0.106|tr "," "\n"| tee whatweb.log
+for port in "${array_ports[@]}";do
+	if [ "$port" -eq "80" ]; then
+		echo -e "\n\n\n"
+		echo -e "${greenColour}whatweb http://$ip|tr ',' '\\\n'| tee whatweb.log${endColour}\n"
+		whatweb http://$ip|tr ',' '\n'
+	fi
+done
