@@ -2,7 +2,11 @@
 
 import urllib.parse, sys, os
 
-encode = urllib.parse.quote_plus(sys.argv[1])
+if len(sys.argv) != 2:
+    print("Use: {} <str>".format(sys.argv[0]))
+else:
+    encode = urllib.parse.quote_plus(sys.argv[1])
+    print(encode)
+    os.system("echo '{}' | xclip -sel clip".format(encode))
 
-print(encode)
-os.system("echo '{}' | xclip -sel clip".format(encode))
+
