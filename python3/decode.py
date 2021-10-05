@@ -3,7 +3,9 @@
 import sys, os
 from urllib.parse import unquote
 
-decode = unquote(sys.argv[1]);
-
-print(decode)
-os.system("echo '{}' | xclip -sel clip".format(decode))
+if len(sys.argv) != 2:
+    print("Use: {} <str>".format(sys.argv[0]))
+else:
+    decode = unquote(sys.argv[1]);
+    print(decode)
+    os.system("echo '{}' | xclip -sel clip".format(decode))
