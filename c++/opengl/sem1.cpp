@@ -1,4 +1,4 @@
-
+// compilacion en linux: g++ -lglut -lGL -lGLU -o test
 // DIRECTIVAS  DEL PROCESADOR
 #include <stdlib.h>
 #include <math.h>
