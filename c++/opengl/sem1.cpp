@@ -11,17 +11,17 @@ void reshape(int,int);
 
 
 int main(int argc, char** argv){
-glutInit(&argc, argv);
-glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
-glutInitWindowSize(250,250);
-glutInitWindowPosition(100,100);
-glutCreateWindow(argv[0]);
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
+    glutInitWindowSize(250,250);
+    glutInitWindowPosition(100,100);
+    glutCreateWindow(argv[0]);
 
-init();
-glutDisplayFunc(display);
-glutReshapeFunc(reshape);
-glutMainLoop();
-return 0;
+    init();
+    glutDisplayFunc(display);
+    glutReshapeFunc(reshape);
+    glutMainLoop();
+    return 0;
 }
 
 void init(void){
@@ -49,10 +49,10 @@ void display(void){
 }
 
 void reshape(int w, int h){
-glViewport(0,0,(GLsizei)w, (GLsizei)h);
-glMatrixMode(GL_PROJECTION);
-glLoadIdentity();
-glOrtho(-10.0,10.0,-10.0,10,-10.0,10.0);
-glMatrixMode(GL_MODELVIEW);
-glLoadIdentity();
+    glViewport(0,0,(GLsizei)w, (GLsizei)h);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(-10.0,10.0,-10.0,10,-10.0,10.0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
 }
