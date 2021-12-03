@@ -50,7 +50,19 @@ void Desencolar(TpNodo &lista){
  	delete(t);
  	
  }
- 
+
+// MOSTRAR COLA
+void mostrar(TpNodo &lista){
+	TpNodo temp=lista;
+	int n=1;	// contador de nodos
+	
+	while(temp!=NULL){
+		cout<<"Nodo ["<<n<<"] con valor: "<<temp->dato<<endl;
+		temp=temp->sgte;
+		n++;
+	}
+}
+
 // FUNCION PRINCIPAL
 int main( ) {
 	TpNodo t=NULL, lista=NULL, p=NULL, q=NULL;
@@ -69,13 +81,7 @@ int main( ) {
 				break;			
 			}
 			case 3:{
-				p=lista;
-				n=1;
-				while(p!=NULL){
-					cout<<"El nodo "<<n<<" con valor > "<<p->dato<<endl;
-					p=p->sgte;
-					n++;
-				}
+				mostrar(lista);
 				system("pause>nul");
 				break;
 			}	
