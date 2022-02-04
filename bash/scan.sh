@@ -10,6 +10,12 @@ purpleColour="\e[0;35m\033[1m"
 turquoiseColour="\e[0;36m\033[1m"
 grayColour="\e[0;37m\033[1m"
 
+trap ctrl_c INT
+
+function ctrl_c(){
+	exit 1
+}
+
 ip=$1
 
 # ESCANEO GREPEABLE
@@ -22,11 +28,13 @@ ip_address="$(cat allPorts | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sor
 
 sleep 1
 # EXTRAYENDO INFORMACION
-echo -e "\n\n\n-------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+for i in $(seq 1 $(stty -a | grep columns | awk -F " " '{print $7}' | tr -d ";"));do echo -n "-";done
+
 echo -e "${yellowColour}[*] Extracting information...${endColour}\n"
 echo -e "\t${yellowColour}[*]${endColour} ${grayColour}IP Address: $ip_address${endColour}"
 echo -e "\t${yellowColour}[*]${endColour} ${grayColour}Open ports: $ports${endColour}\n"
-echo -e "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n"
+
+for i in $(seq 1 $(stty -a | grep columns | awk -F " " '{print $7}' | tr -d ";"));do echo -n "-";done
 
 # ESCANEO UDP
 # nmap -sU -p- --min-rate 10000 -oN udpScan $ip
@@ -36,7 +44,7 @@ echo -e "-----------------------------------------------------------------------
 echo -e "\n${greenColour}nmap -p${ports} -sC -sV -Pn ${ip_address} -oN targeted${endColour}"
 sudo grc nmap -p${ports} -sC -sV -Pn ${ip_address} -oN targeted
 
-echo -e "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+for i in $(seq 1 $(stty -a | grep columns | awk -F " " '{print $7}' | tr -d ";"));do echo -n "-";done
 # WHATWEB
 for port in "${array_ports[@]}";do
 	if [ "$port" -eq "80" ]; then
@@ -45,3 +53,4 @@ for port in "${array_ports[@]}";do
 		whatweb http://$ip|tr ',' '\n'
 	fi
 done
+for i in $(seq 1 $(stty -a | grep columns | awk -F " " '{print $7}' | tr -d ";"));do echo -n "-";done
