@@ -9,7 +9,7 @@ namespace mensaje
 int options);
  static void Main(string[] args)
  {
- MessageBox(IntPtr.Zero, "This is my text", "This is my caption", 0);
+ MessageBox(IntPtr.Zero, "Texto de prueba", "titulo", 0);
  }
  }
 }
