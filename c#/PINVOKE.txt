@@ -12,7 +12,7 @@ static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byt
 
 // CREATE_REMOTE_THREAD
 [DllImport("kernel32.dll")]
-static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, ThreadStartDelegate lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+static extern IntPtr CreateRemoteThread(IntPtr hProcess, IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
 
 // GET_PROC_ADDRESS
 [DllImport("kernel32", CharSet=CharSet.Ansi, ExactSpelling=true, SetLastError=true)]
