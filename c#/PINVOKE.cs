@@ -1,3 +1,5 @@
+###########################################################################################################################################################
+# DLL INJECTION
 // OPEN_PROCESS
 [DllImport("kernel32.dll", SetLastError = true)]
 public static extern IntPtr OpenProcess(uint processAccess, bool bInheritHandle, int processId);
@@ -21,4 +23,8 @@ static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
 // GET_MODULE_HANDLE
 [DllImport("kernel32.dll", CharSet=CharSet.Unicode, SetLastError=true)]
 public static extern IntPtr GetModuleHandle([MarshalAs(UnmanagedType.LPWStr)] in string lpModuleName);
+###########################################################################################################################################################
+
+
+
 
