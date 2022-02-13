@@ -1,9 +1,0 @@
-
-# INICIAR UN ENTORNO VIRTUAL
-pipenv shell
-
-# MOSTRAR TODO LO INSTALADO EN EL AMBIENTE
-pip freeze
-
-# INSTALAR MODULOS
-pipenv install django

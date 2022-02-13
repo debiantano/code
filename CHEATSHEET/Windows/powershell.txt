@@ -1,4 +1,0 @@
-
-#powershell
-powershell Invoke-WebRequest "http://192.168.0.109:8000/FILE" -OutFile "C:\Users\advance\Desktop\FILE"
-powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.0.109:8000/FILE','C:\Users\advance\Desktop\FILE')"

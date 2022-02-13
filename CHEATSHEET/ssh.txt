@@ -1,3 +1,0 @@
-
-# PERMITIR CONEXION SSH A ROOT
-nano /etc/ssh/sshd_config	PermitRootLogin yes

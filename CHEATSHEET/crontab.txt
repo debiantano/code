@@ -1,5 +1,0 @@
-
-# ENUMERAR TAREAS CRON
-crontab -l
-
-# PSPY

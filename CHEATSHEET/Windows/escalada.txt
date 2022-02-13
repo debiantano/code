@@ -1,2 +1,0 @@
-# JUICY POTATO
-SeImpersonatePrivilege 		->		Enable

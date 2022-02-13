@@ -1,8 +1,0 @@
-
-# ESTABLE EL TIPO DE DESMONTAJE DEL DEPURADOR
-# (INTEL) -> MUESTRA EL CODIgo DE DESMONTAJE EN ESTILO INTEL
-set disassembly-flavor intel
-
-# DESMONTAR LA fUNCION PRINCIPAL
-disass main
-disass fComprobacion
