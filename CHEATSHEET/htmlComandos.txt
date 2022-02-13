@@ -1,0 +1,23 @@
+
+# EMOTICONES, TILDES, ETC
+<meta charset="utf-8" />
+
+# LETRA DESPLAZANDOSE
+<marquee>moviendome</marquee>
+
+# COLOR DE FONDO
+<BODY bgcolor="#99d2b7">
+
+# TEXTO ADORNO
+<strong>TEXTO EN NEGRITA</strong>
+<em>TEXTO EN CURSIVA</em>
+<u>TEXTO SUBRAYADO</u>
+
+# UBICACION
+<center></center>
+<br> : realizar un enter
+<hr> : linea horizontal
+
+# COLORES E IMAGENES
+<pstyle="color:#FF0000";>TEXTO EN ROJO</p>
+<img src="mifoto.jpg" width="100" height="100" />

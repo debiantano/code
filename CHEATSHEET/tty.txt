@@ -1,0 +1,7 @@
+# ZSH
+python -c "import pty;pty.spawn('/bin/bash')"
+ctrl_z
+stty raw -echo; fg
+xterm
+export TERM=xterm
+stty rows 37 columns 135

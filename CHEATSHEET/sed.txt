@@ -1,0 +1,13 @@
+
+# ELIMINAR LINEAS VACIAS CON SED
+grep "href" index.html | grep "\.megacorpone" | grep -v "www\.megacorpone\.com" | awk -F "http://" '{print $2}' | cut -d "/" -f 1 |
+sed '/^\s*$/d'
+
+# ELIMINAR FILAS VACIAS
+sed '/^\s*$/d'
+
+# ELIMINAR ESPACIOS EN EL INICIO
+sed 's/^ *//'
+
+# ELIMINAR TABULACIONES AL INICIO
+sed -e "s/[[:space:]]\+/ /g"

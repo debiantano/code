@@ -1,0 +1,7 @@
+
+# ENUMERACION
+nmap -p445 --script="smb-vuln*" 10.10.152.135
+nmap --script "vuln and safe" -p445 10.10.10.197 -oN vulnScan
+
+# RDESKTOP
+rdesktop 10.10.152.135 -g90% -u Jon -p alqfna22

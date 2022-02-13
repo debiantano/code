@@ -1,0 +1,6 @@
+
+# Listar todos los archivos
+dir /s
+
+dir /s flag*
+dir /s /b flag*

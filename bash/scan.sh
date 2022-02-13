@@ -1,0 +1,56 @@
+#!/bin/bash
+
+#Colours
+greenColour="\e[0;32m\033[1m"
+endColour="\033[0m\e[0m"
+redColour="\e[0;31m\033[1m"
+blueColour="\e[0;34m\033[1m"
+yellowColour="\e[0;33m\033[1m"
+purpleColour="\e[0;35m\033[1m"
+turquoiseColour="\e[0;36m\033[1m"
+grayColour="\e[0;37m\033[1m"
+
+trap ctrl_c INT
+
+function ctrl_c(){
+	exit 1
+}
+
+ip=$1
+
+# ESCANEO GREPEABLE
+echo -e "\n${greenColour}sudo nmap -p- --open -sS -Pn -n --min-rate 5000 -vvv $1 -oG allPorts${endColour}"
+sudo grc nmap -p- --open -sS -Pn -n --min-rate 5000 -vvv $ip -oG allPorts
+
+ports="$(/usr/bin/cat allPorts | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
+declare -a array_ports="( $(/usr/bin/cat allPorts | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/'| xargs) )"
+ip_address="$(cat allPorts | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
+
+sleep 1
+# EXTRAYENDO INFORMACION
+for i in $(seq 1 $(stty -a | grep columns | awk -F " " '{print $7}' | tr -d ";"));do echo -n "-";done
+
+echo -e "${yellowColour}[*] Extracting information...${endColour}\n"
+echo -e "\t${yellowColour}[*]${endColour} ${grayColour}IP Address: $ip_address${endColour}"
+echo -e "\t${yellowColour}[*]${endColour} ${grayColour}Open ports: $ports${endColour}\n"
+
+for i in $(seq 1 $(stty -a | grep columns | awk -F " " '{print $7}' | tr -d ";"));do echo -n "-";done
+
+# ESCANEO UDP
+# nmap -sU -p- --min-rate 10000 -oN udpScan $ip
+
+
+# ESCANEO COMPLETO
+echo -e "\n${greenColour}nmap -p${ports} -sC -sV -Pn ${ip_address} -oN targeted${endColour}"
+sudo grc nmap -p${ports} -sC -sV -Pn ${ip_address} -oN targeted
+
+for i in $(seq 1 $(stty -a | grep columns | awk -F " " '{print $7}' | tr -d ";"));do echo -n "-";done
+# WHATWEB
+for port in "${array_ports[@]}";do
+	if [ "$port" -eq "80" ]; then
+		echo -e "\n\n\n"
+		echo -e "${greenColour}whatweb http://$ip|tr ',' '\\\n'| tee whatweb.log${endColour}\n"
+		whatweb http://$ip|tr ',' '\n'
+	fi
+done
+for i in $(seq 1 $(stty -a | grep columns | awk -F " " '{print $7}' | tr -d ";"));do echo -n "-";done

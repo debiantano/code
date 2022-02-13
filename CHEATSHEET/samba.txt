@@ -1,0 +1,25 @@
+
+# ETERNAL BLUE
+nmap --script "vuln and safe" -p445 10.10.220.155
+nmap --script=smb-vuln-ms17-010 -p445 10.10.220.155
+
+# INICIAR SERVICIO SAMBA
+sudo service smbd stop
+
+#  SERVICIO SAMBA
+smbmap -H 192.168.0.109 -R
+smbmap -H 10.10.21.168 -u 'null'
+
+# MODO INTERACTIVO SIMILAR A FTP (usuario null)
+smbclient -N \\\\192.168.213.11\\ITDEPT
+smbclient -N //192.168.213.11/ITDEPT
+
+# SOLO ENUMERAR RECURSOS
+smbclient -N -L //192.168.0.109
+
+# SCRIPT NMAP SAMBA
+nmap --script=smb-enum-shares.nse,smb-enum-users.nse -p445 -T4 192.168.0.109
+enum4linux 192.168.0.109
+
+# DESCARGAR ARCHIVOS DE FORMA RECURSIVA
+smbget -R smb://10.10.231.136/BillySMB/

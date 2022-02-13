@@ -1,0 +1,12 @@
+
+# DESCOMPRIMIR 7Z
+7z e paquete.7z
+
+# DESCOMPRIMIR GZ
+gzip -d bomb.gz 
+
+# COMPRIMIR .ZIP
+zip shell2.zip shell.php
+
+# ZIP CON CLAVE
+unzip -P miPassword Archivo.zip
