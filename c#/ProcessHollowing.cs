@@ -50,32 +50,47 @@ namespace ProcessHollowing
 
         // API CreateProcess
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Ansi)]
-        static extern bool CreateProcess(string lpApplicationName, string lpCommandLine,
-        IntPtr lpProcessAttributes, IntPtr lpThreadAttributes, bool bInheritHandles,
-        uint dwCreationFlags, IntPtr lpEnvironment, string lpCurrentDirectory,
-        [In] ref STARTUPINFO lpStartupInfo, out PROCESS_INFORMATION
-        lpProcessInformation);
+        static extern bool CreateProcess(
+            string lpApplicationName, 
+            string lpCommandLine,
+            IntPtr lpProcessAttributes,
+            IntPtr lpThreadAttributes,
+            bool bInheritHandles,
+            uint dwCreationFlags,
+            IntPtr lpEnvironment,
+            string lpCurrentDirectory,
+            [In] ref STARTUPINFO lpStartupInfo,
+            out PROCESS_INFORMATION lpProcessInformation);
 
+        // ZwQueryInformationProcess
         [DllImport("ntdll.dll", CallingConvention = CallingConvention.StdCall)]
-        private static extern int ZwQueryInformationProcess(IntPtr hProcess,
-        int procInformationClass, ref PROCESS_BASIC_INFORMATION procInformation,
-        uint ProcInfoLen, ref uint retlen);
+        private static extern int ZwQueryInformationProcess(
+            IntPtr hProcess,
+            int procInformationClass,
+            ref PROCESS_BASIC_INFORMATION procInformation,
+            uint ProcInfoLen,
+            ref uint retlen);
 
+        // ReadProcessMemory
         [DllImport("kernel32.dll", SetLastError = true)]
-        static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress,
-        [Out] byte[] lpBuffer, int dwSize, out IntPtr lpNumberOfBytesRead);
+        static extern bool ReadProcessMemory(
+            IntPtr hProcess,
+            IntPtr lpBaseAddress,
+            [Out] byte[] lpBuffer,
+            int dwSize,
+            out IntPtr lpNumberOfBytesRead);
 
         [DllImport("kernel32.dll")]
         static extern bool WriteProcessMemory(
-        IntPtr hProcess,
-        IntPtr lpBaseAddress,
-        byte[] lpBuffer,
-        Int32 nSize,
-        out IntPtr lpNumberOfBytesWritten
-        );
+            IntPtr hProcess,
+            IntPtr lpBaseAddress,
+            byte[] lpBuffer,
+            Int32 nSize,
+            out IntPtr lpNumberOfBytesWritten);
 
+        // ResumeThread
         [DllImport("kernel32.dll", SetLastError = true)]
-        static extern uint ResumeThread(IntPtr hThread);
+        static extern uint ResumeThread (IntPtr hThread);
 
         static void Main(string[] args)
         {
