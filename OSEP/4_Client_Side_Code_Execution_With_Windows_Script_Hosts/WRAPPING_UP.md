@@ -12,3 +12,5 @@ ruta -> C:\<path>\DotNetToJScript\ExampleAssembly\bin\Release\
 ```
 DotNetToJScript.exe ExampleAssembly.dll --lang=Jscript --ver=v4 -o dmo.js
 ```
+
+
