@@ -1,4 +1,9 @@
 
+## Desactivar DEP
+```
+bcdedit.exe /set {current} nx AlwaysOff
+```
+
 ## BYTEARRAY
 ```pip install badchars```
 ```badchars -f python```
