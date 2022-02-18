@@ -18,3 +18,5 @@
 #### Pattern offset
 ```!mona pattern_offset <direccion>```
 
+#### Encuentre instrucciones en DLL específico
+```!mona find -s " " -m example.dll```
