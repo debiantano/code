@@ -19,4 +19,7 @@
 ```!mona pattern_offset <direccion>```
 
 #### Encuentre instrucciones en DLL específico
-```!mona find -s " " -m example.dll```
+```
+!mona find -s " " -m example.dll
+!mona find -s "\xff\xe4" -m RM2MP3Converter.exe
+```
