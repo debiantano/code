@@ -24,3 +24,4 @@ VulnSever                     -> Windows 7, XP sp3
 EasyRMtoMP3Converter2.7.3.700 -> Windows XP sp3
 CloudMe                       -> Windows 7
 oscp THM                      -> Windows 7, XP sp3
+SoritongMP3Player             -> Windows XP sp3
