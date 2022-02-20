@@ -16,3 +16,11 @@ bcdedit.exe /set {current} nx AlwaysOff
 
 #### Idioma teclado
 ES Spanish (United States)
+
+-------
+
+Brainpan                      -> Windows 7, XP sp3
+VulnSever                     -> Windows 7, XP sp3
+EasyRMtoMP3Converter2.7.3.700 -> Windows XP sp3
+CloudMe                       -> Windows 7
+oscp THM                      -> Windows 7, XP sp3
