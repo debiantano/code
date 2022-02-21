@@ -23,3 +23,6 @@
 !mona find -s " " -m example.dll
 !mona find -s "\xff\xe4" -m RM2MP3Converter.exe
 ```
+
+#### Generar patron
+```!mona pc 500```
