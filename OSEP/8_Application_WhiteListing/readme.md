@@ -17,3 +17,7 @@ more < "c:\Temp\archivo.md:test.txt"
 - NoLanguage
 
 [https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/](https://devblogs.microsoft.com/powershell/powershell-constrained-language-mode/)
+
+
+#### Visualizar permisos de escritura
+```accesschk64.exe "Users" c:/Windows -w```
