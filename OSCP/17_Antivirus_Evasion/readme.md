@@ -6,7 +6,7 @@
 
 #### Cambiar GPO
 ```
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 Get-ExecutionPolicy -Scope CurrentUser
 > Forma simplificada
 powershell -ExecutionPolicy bypass
