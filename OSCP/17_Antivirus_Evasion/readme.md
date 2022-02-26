@@ -1,8 +1,12 @@
 #### Ver politica de ejecucion actual
-```Get-ExecutionPolicy```
+```
+Get-ExecutionPolicy
+```
 
 #### Mostrar la politica de ejecucion de cada ambito
-```Get-ExecutionPolicy -List```
+```
+Get-ExecutionPolicy -List
+```
 
 #### Cambiar GPO
 ```
