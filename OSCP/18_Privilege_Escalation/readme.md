@@ -78,3 +78,11 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v Dis
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableRealtimeMonitoring /t REG_DWORD /d 1 /f > nul
 ```
 
+#### Abrir PowerShell como Administrador
+```
+Start-Process cmd.exe -Verb runasUser
+Start-Process cmd.exe -Verb ruAs
+```
+
+
+
