@@ -12,3 +12,11 @@ drop database tutorial
 ```
 xp_cmdshell "whoami"
 ```
+
+-----
+
+### MS QSL
+#### Enumeracion sql server
+```
+setspn -T corp1 -Q MSSQLSvc/*
+```
