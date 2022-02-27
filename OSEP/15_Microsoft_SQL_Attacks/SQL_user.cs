@@ -15,7 +15,7 @@ namespace SQL
             try
             {
                 con.Open();
-                Console.WriteLine("[+]Éxito de autenticación!");
+                Console.WriteLine("[+] Éxito de autenticación!");
             }
             catch
             {
