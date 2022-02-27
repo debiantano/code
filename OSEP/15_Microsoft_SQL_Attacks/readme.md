@@ -1,2 +1,14 @@
 #### Crear una base de datos
-CREATE DATABASE tutorial
+```
+create database tutorial
+```
+
+#### Eliminar DDBB
+```
+drop database tutorial
+```
+
+#### Ejecucion de comandos
+```
+xp_cmdshell "whoami"
+```
