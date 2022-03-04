@@ -68,8 +68,16 @@ document.forms[0].parentNode.appendChild(input)
 document.forms[0].parentNode.appendChild(document.forms[0)
 ```
 
-
 ### 6. Capture all clicks
+```
+function CaughtClick(){
+  alert("You clicked");
+}
+document.body.addEventListener('click', CaughtClick, true);
+
+
+```
+
 ### 7. Keystroke logging
 ### 8. Event listener
 ### 9. Include external
