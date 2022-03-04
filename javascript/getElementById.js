@@ -13,3 +13,20 @@ document.getElementById("demo").innerHTML = "Hello World";
 
 </body>
 </html>
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="demo">The Document Object</h1>
+<h2>The getElementById() Method</h2>
+
+<script>
+const myElement = document.getElementById("demo");
+myElement.style.color = "blue";
+</script>
+
+</body>
+</html>
