@@ -33,7 +33,7 @@ Enumerar todas las páginas a las que podíamos acceder sin autenticación
 grep -rnw /var/www/html/ATutor -e "^.*user_location.*public.*" -color
 ```
 
-Después de pasar un tiempo haciéndolo, descubrimos un hallazgo potencialmente interesante. Miremos el código encontrado en ```/var/www/html/ATutor/mods/_standard/social/index_public.php```` 
+Después de pasar un tiempo haciéndolo, descubrimos un hallazgo potencialmente interesante. Miremos el código encontrado en ```/var/www/html/ATutor/mods/_standard/social/index_public.php``` 
 ```
 14: $_user_location = 'public'; 15: 
 16: define('AT_INCLUDE_PATH', '../../../include/'); 
