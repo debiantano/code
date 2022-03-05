@@ -1,0 +1,5 @@
+- SSTI
+- SQL blid
+- Serializacion
+- CSRF
+- Sesion hijacking
