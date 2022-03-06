@@ -1,6 +1,6 @@
 #### Configurando el entorno MYSQL LOG
 ```
-student@atutor:~$ sudo nano /etc/mysql/my.cnf
+student@atutor:~$ sudo nano /etc/mysql/my.cnf <> /etc/mysql/mariadb.conf.d/50-server.cnf
 [mysqld]
 general_log_file = /var/log/mysql/mysql.log 
 general_log = 1
