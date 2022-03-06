@@ -1,6 +1,7 @@
-#### Configurando el entorno
+#### Configurando el entorno MYSQL LOG
 ```
-student@atutor:~$ sudo nano /etc/mysql/my.cnf [mysqld] ... 
+student@atutor:~$ sudo nano /etc/mysql/my.cnf
+[mysqld]
 general_log_file = /var/log/mysql/mysql.log 
 general_log = 1
 
