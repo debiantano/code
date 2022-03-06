@@ -44,6 +44,9 @@ Después de pasar un tiempo haciéndolo, descubrimos un hallazgo potencialmente 
 21: require(AT_SOCIAL_INCLUDE.'classes/PrivacyControl/PrivacyController.class.php'); 
 ```
 
+ ```
+ grep -rnw /var/www/html/ATutor -e "function searchFriends" --color
+ ```
 
 
 
