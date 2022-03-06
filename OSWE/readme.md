@@ -1,5 +1,7 @@
 - SSTI
-- SQL blid
-- Serializacion
+- SQL blind
+- SQL error based
+- Serializacion java
+- Serializacion .NET
 - CSRF
 - Sesion hijacking
