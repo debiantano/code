@@ -1,4 +1,0 @@
-
-# COMANDOS TCPDUMP
-tcpdump -i wlan0 icmp -vv
-sudo tcpdump  -i tun0 icmp -n

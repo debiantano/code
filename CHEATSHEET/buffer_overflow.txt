@@ -1,3 +1,0 @@
-
-# COMPILACION STACK_BASED
-gcc -z execstack -g -fno-stack-protector -mpreferred-stack-boundary=2 exercise.c -o vuln

@@ -1,6 +1,0 @@
-
-# EXAMINAR LAS CAPABILITIES DE ARCHIVOS
-getcap -r / 2>/dev/null
-
-# OTORGAR CAPABILITY VULNERABLE
-setcap cap_setuid+ep /usr/bin/python3.6

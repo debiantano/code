@@ -1,8 +1,0 @@
-
-# DESMONTAJE DEL BINARIO
-objdump -d vuln
-
-
-# ENSAMBLADOR
-SUB : instrucciones aritmeticas
-LEA : carga la direccion del operando fuerte
