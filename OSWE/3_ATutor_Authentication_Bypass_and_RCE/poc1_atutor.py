@@ -27,10 +27,10 @@ def main():
   print '(+) eg: %s 192.168.121.103 "aaaa\'" ' % sys.argv[0]   
   sys.exit(-1)
   
-ip = sys.argv[1] 
-injection_string = sys.argv[2] 
+  ip = sys.argv[1] 
+  injection_string = sys.argv[2] 
 
-searchFriends_sqli(ip, injection_string) 
+  searchFriends_sqli(ip, injection_string) 
 
 if __name__ == "__main__":
   main() 
