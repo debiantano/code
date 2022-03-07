@@ -3,5 +3,6 @@
 - SQL error based
 - Serializacion java
 - Serializacion .NET
-- CSRF
+- CSRF o session ridding
 - Sesion hijacking
+- File Upload
