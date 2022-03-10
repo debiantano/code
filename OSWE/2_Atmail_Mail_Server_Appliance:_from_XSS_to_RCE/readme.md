@@ -3,9 +3,13 @@
 admin@offsec.local    : 123456
 attacker@offsec.local : 123456
 wget http://htmlpurifier.org/live/smoketests/xssAttacks.xml
-
 ```
 
+### XSS attack
+```
+python xss-webmail-fuzzer.py -t admin@offsec.local -f attacker@offsec.local -s 192.168.100.34 -c plain -j onebyone_main -r 2
+python xss-webmail-fuzzer.py -t admin@offsec.local -f attacker@offsec.local -s 192.168.100.34 -c plain -j onebyone_main -r 13
+```
 
 
 ### Session hijacking 
