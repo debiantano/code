@@ -1,3 +1,13 @@
+### Atmail 3.6
+```
+admin@offsec.local    : 123456
+attacker@offsec.local : 123456
+wget http://htmlpurifier.org/live/smoketests/xssAttacks.xml
+
+```
+
+
+
 ### Session hijacking
 ```
 Inspeccionador -> Console
