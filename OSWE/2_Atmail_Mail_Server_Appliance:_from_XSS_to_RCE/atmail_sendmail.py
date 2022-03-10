@@ -37,6 +37,3 @@ if __name__=="__main__":
 	payload = sys.argv[2]
 
 	sendMail(dstemail, frmemail, smtpsrv, payload)
-
-
-
