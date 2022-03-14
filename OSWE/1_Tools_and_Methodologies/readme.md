@@ -23,7 +23,6 @@
 
 ----
 
-- dnsPy
 Compilar c#: `csc test.cs`
 
 
