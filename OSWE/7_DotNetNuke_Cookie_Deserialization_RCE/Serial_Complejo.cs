@@ -1,4 +1,4 @@
-//serial.exe "serializando primera clase" 1
+//serial.exe "serializing first class..." 1
 using System; 
 using System.IO; 
 using System.Xml; 
