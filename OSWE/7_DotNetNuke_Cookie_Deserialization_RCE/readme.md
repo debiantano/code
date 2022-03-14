@@ -15,3 +15,8 @@ El enfoque principal del módulo estará dirigido al proceso de deserialización
 El concepto de serialización (y deserialización) existe en informática desde hace varios años. 
 años. Su propósito es convertir una estructura de datos en un formato que pueda almacenarse o transmitirse a través de un enlace de red para consumo futuro.
 
+#### Instancia de clase XmlSerializer
+```
+XmlSerializer serializer = new XmlSerializer(typeof(MyConsoleText));
+```
+
