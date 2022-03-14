@@ -1,3 +1,4 @@
+//csc /reference:serial.exe deserial.cs
 using System.IO; 
 using System.Xml.Serialization; 
 using BasicXMLSerializer;
