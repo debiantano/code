@@ -55,8 +55,8 @@ Después de pasar un tiempo haciéndolo, descubrimos un hallazgo potencialmente 
  ```
 
 ## PHP
-`isset`: Si tiene valor devuelve un **true**  
-`intval`: Obtiene el valor entero de una variable  
-
-
+- `isset`: Si tiene valor devuelve un **true**  
+- `intval`: Obtiene el valor entero de una variable  
+- `àddslashes`: Devuelve una cadena con barras invertidas añadidas antes de los caracteres que deben escaparse (',",\,NUL)  
+- `continue`:se utiliza dentro de las estructuras iterativas para saltar el resto de la iteración actual del bucle y continuar la ejecución en la evaluación de la condición, para luego comenzar la siguiente iteración.
 
