@@ -19,5 +19,11 @@
 /(com)$/             //buscar una expresion al final del texto
 /^(www)/             // al inicio de la cadena
 /(?=)/               //
-
 ```
+
+----
+
+- dnsPy
+Compilar c#: `csc test.cs`
+
+
