@@ -1,3 +1,5 @@
+//csc /reference:serial.exe deserial.cs
+//deserial.exe multiXML.txt
 using System; 
 using System.Diagnostics; 
 using System.IO; 
