@@ -44,8 +44,7 @@ namespace MultiXMLSerializer
 
             xmlElement2.AppendChild(xmlDocument.ImportNode(xmlDocument2.DocumentElement, true)); 
             xmlElement.AppendChild(xmlElement2);
-            File.WriteAllText("C:\\Users\\Public\\multiXML.txt", 
-            xmlDocument.OuterXml); 
+            File.WriteAllText("C:\\Users\\RICHAR\\Desktop\\multiXML.txt", xmlDocument.OuterXml); 
         } 
     }
 
