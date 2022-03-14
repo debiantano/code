@@ -1,3 +1,4 @@
+//serial.exe "Hello AWAE"
 using System;
 using System.IO; 
 using System.Xml.Serialization;
