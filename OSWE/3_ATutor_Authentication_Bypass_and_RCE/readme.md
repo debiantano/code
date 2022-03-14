@@ -1,7 +1,7 @@
 ### Configuracion Atutor 2.2.1
 - Descarga [https://sourceforge.net/projects/atutor/files/atutor_2_2_1/](https://sourceforge.net/projects/atutor/files/atutor_2_2_1/)
 
-- POC: http://192.168.100.28/atutor/mods/_standard/social/index_public.php
+- POC: http://192.168.100.28/atutor/mods/_standard/social/index_public.php?q='
 
 #### Configurando el entorno MYSQL LOG
 ```
