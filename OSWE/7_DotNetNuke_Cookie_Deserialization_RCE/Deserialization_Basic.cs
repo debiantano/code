@@ -1,4 +1,5 @@
 //csc /reference:serial.exe deserial.cs
+//deserial.exe basicXML.txt
 using System.IO; 
 using System.Xml.Serialization; 
 using BasicXMLSerializer;
