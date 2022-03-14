@@ -28,7 +28,7 @@ namespace BasicXMLSerializer
         public String text 
         { 
             get { return _text; } 
-            set { _text = value; Console.WriteLine("My first console text class says: " + _text); }
+            set { _text = value; Console.WriteLine("Mi primera clase de texto de consola dice: " + _text); }
         } 
     } 
 }
