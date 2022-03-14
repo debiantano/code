@@ -6,3 +6,7 @@
 - Crear Base de Datos dnn9
 - Nuevo usuario `dnn9user : dnn9user`
 - `UserMapping` -> DNN9 - dn_owner - public
+
+----
+
+El enfoque principal del módulo estará dirigido al proceso de deserialización de `.Net`, y más específicamente en la clase XMLSerializer.
