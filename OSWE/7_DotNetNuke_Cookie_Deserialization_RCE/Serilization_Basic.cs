@@ -15,7 +15,7 @@ namespace BasicXMLSerializer
         static void MySerializer(MyConsoleText txt) 
         { 
             var ser = new XmlSerializer(typeof(MyConsoleText));
-            TextWriter writer = new StreamWriter("C:\\Users\\advance\\Desktop\\basicXML.txt");
+            TextWriter writer = new StreamWriter("C:\\Users\\RICHAR\\Desktop\\basicXML.txt");
             ser.Serialize(writer, txt);
             writer.Close(); 
         } 
