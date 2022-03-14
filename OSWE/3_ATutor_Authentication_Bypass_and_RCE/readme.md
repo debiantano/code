@@ -54,6 +54,9 @@ Después de pasar un tiempo haciéndolo, descubrimos un hallazgo potencialmente 
  grep -rnw /var/www/html/ATutor -e "function searchFriends" --color
  ```
 
+## PHP
+`isset`: Si tiene valor devuelve un **true**  
+`intval`: Obtiene el valor entero de una variable  
 
 
 
