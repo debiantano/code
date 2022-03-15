@@ -8,3 +8,6 @@
 ```
 sudo pkill -KILL -u <user>
 ```
+
+#### Explorador de archivos
+```naitilus - caja - thunar```
