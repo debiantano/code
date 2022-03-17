@@ -22,3 +22,8 @@ Spanish
 latinoAmerica
 No compose key
 ```
+
+### Error hey
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <ERROR> 
+```
