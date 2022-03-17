@@ -3,3 +3,4 @@ OpenCRX es una aplicación de gestión de relaciones con los clientes (CRM) de c
 [https://github.com/opencrx/opencrx](https://github.com/opencrx/opencrx)
 
 - Descarga [https://github.com/opencrx/opencrx/releases/tag/opencrx-v4.3.0](https://github.com/opencrx/opencrx/releases/tag/opencrx-v4.3.0)
+- URL [http://localhost:8080/opencrx-core-CRX](http://localhost:8080/opencrx-core-CRX)
