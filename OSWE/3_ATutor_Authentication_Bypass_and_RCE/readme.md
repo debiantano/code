@@ -26,6 +26,8 @@ CONFIGURACION (FILE UPLOAD)
 REEMPLAZAR
 [gzopen]  -> [gzopen64]
 [@gzopen] -> [@gzopen64]
+CONF RCE OSWE
+sudo chmod 757 ./atutor/mods/
 ```
 
 
