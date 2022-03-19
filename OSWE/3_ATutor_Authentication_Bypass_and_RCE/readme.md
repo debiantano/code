@@ -7,7 +7,7 @@
 
 ```
 OS:  Ubuntu 14.04.6 LTS
-mysql  atutor:atutor
+mysql  atutor:atutor 5.6.16-1~exp1-log
 PHP 5.5.9-1ubuntu4
 
 [X] mysql
