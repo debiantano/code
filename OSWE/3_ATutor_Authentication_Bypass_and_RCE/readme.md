@@ -3,6 +3,34 @@
 
 - POC: http://192.168.100.28/atutor/mods/_standard/social/index_public.php?q='
 
+- Instalación
+
+```
+OS:  Ubuntu 14.04.6 LTS
+mysql  atutor:atutor
+PHP 5.5.9-1ubuntu4
+
+[X] mysql
+add (php.ini)
+extensión=mysqli
+extensión=pdo_mysql
+restart apache2
+
+[WARNING]
+sudo apt-get install php5-gd
+sudo apt-get install php5-curl
+restart apache2
+
+CONFIGURACION (FILE UPLOAD)
+/var/www/html/atutor/include/classes/pclzip.lib.php
+REEMPLAZAR
+[gzopen]  -> [gzopen64]
+[@gzopen] -> [@gzopen64]
+```
+
+
+----
+
 #### Configurando el entorno MYSQL LOG
 ```
 student@atutor:~$ sudo nano /etc/mysql/my.cnf <> /etc/mysql/mariadb.conf.d/50-server.cnf
