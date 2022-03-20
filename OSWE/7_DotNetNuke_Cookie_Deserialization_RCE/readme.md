@@ -20,3 +20,9 @@ años. Su propósito es convertir una estructura de datos en un formato que pued
 XmlSerializer serializer = new XmlSerializer(typeof(MyConsoleText));
 ```
 
+----
+### Debug
+```
+LINEA 11
+[assembly: Debuggable(DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
+```
