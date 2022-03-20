@@ -26,3 +26,4 @@ XmlSerializer serializer = new XmlSerializer(typeof(MyConsoleText));
 LINEA 11
 [assembly: Debuggable(DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
 ```
+Hacer uso de  DNSPY 32 bits
