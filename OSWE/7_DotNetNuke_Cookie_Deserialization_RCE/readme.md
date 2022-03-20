@@ -28,4 +28,4 @@ LINEA 11
 ```
 Hacer uso de  DNSPY 32 bits
 
-Para el debug w3sp.exe usar dnspy64 como administrador
+Para el debug w3sp.exe usar dnspy64 como administrador (dnspy 5.0.7)
