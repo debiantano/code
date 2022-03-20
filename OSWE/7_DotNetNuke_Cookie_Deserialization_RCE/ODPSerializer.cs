@@ -1,3 +1,6 @@
+// REFERENCE
+// DotNetNuke
+// PresentationFramework
 using System; 
 using System.IO; 
 using System.Xml.Serialization; 
