@@ -27,3 +27,5 @@ LINEA 11
 [assembly: Debuggable(DebuggableAttribute.DebuggingModes.Default | DebuggableAttribute.DebuggingModes.DisableOptimizations | DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints | DebuggableAttribute.DebuggingModes.EnableEditAndContinue)]
 ```
 Hacer uso de  DNSPY 32 bits
+
+Para el debug w3sp.exe usar dnspy64 como administrador
