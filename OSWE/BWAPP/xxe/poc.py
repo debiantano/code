@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+# espacios en vez de tabs en xxe
 import requests, base64, sys, re
 
 filename = sys.argv[1]
