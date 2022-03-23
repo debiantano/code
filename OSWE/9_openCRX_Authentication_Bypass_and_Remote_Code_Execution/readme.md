@@ -8,6 +8,17 @@ OpenCRX es una aplicación de gestión de relaciones con los clientes (CRM) de c
 - JDK 1.8 
 - Apache ant
 
+----
+
+#### JAR
+es un tipo de archivo que permite ejecutar aplicaciones y herramientas escritas en el lenguaje Java. Los archivos JAR están comprimidos con el formato ZIP y cambiada su extensión a .jar
+
+#### EAR
+Un archivo EAR requiere un servidor de aplicaciones totalmente compatible con la plataforma Java, `Enterprise Edition (Java EE)` o `Jakarta Enterprise Edition (EE)` como `WebSphere` o `JBoss`, para ejecutarse.
+
+#### WAR
+Un archivo WAR solo requiere un servidor de aplicaciones compatible con `Java EE Web Profile` para ejecutarse
+
 ```
 PASSWORDS DEFAULT
 guest : guest
