@@ -9,6 +9,7 @@ OpenCRX es una aplicación de gestión de relaciones con los clientes (CRM) de c
 - Apache ant
 
 ```
+PASSWORDS DEFAULT
 guest : guest
 admin-Standard : admin-Standard
 admin-Root : admin-Root
