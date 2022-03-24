@@ -1,0 +1,13 @@
+<?xml version='1.0' ?>
+<people>
+
+  <person>
+    <name>Jessie</name>
+    <age>28</age>
+  </person>
+
+  <person>
+    <name>Bale</name>
+    <age>32</age>
+  </person>
+</people>
