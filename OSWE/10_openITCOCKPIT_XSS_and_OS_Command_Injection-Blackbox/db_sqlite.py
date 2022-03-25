@@ -1,9 +1,9 @@
-mport sqlite3
+import sqlite3
 
-ry:
+try:
    mi_conexion = sqlite3.connect("database.db")
    cursor = mi_conexion.cursor()
    cursor.execute("CREATE TABLE persona (nombre VARCHAR(50), edad INTEGER)")
 
-xcept Exception as e:
+except Exception as e:
    print(e)
