@@ -2,6 +2,10 @@ import sqlite3
 import argparse
 import os
 
+//insert_content
+//get_content
+//get_locations
+
 def create_connection(db_file):
     conn = None
     try:
