@@ -43,6 +43,16 @@ while read line; do echo "===$line==="; curl $line/README.md -k; done < packages
 #### Busqueda de posible XSS
 ```
 > find ./ -iname "*.html"
-grep -r "document.write" ./ --include *.html
+> grep -r "document.write" ./ --include *.html
+> grep -r "buildPath[[:space:]]*=" ./
+> cat ./lodash-3.9.3/perf/asset/perf-ui.js
+```
+
+#### Escribiendo en el DOM
+```
+document.getElementsByTagName("body")[0]
+body = document.getElementsByTagName("body")[0]
+body.innerHTML
+body.innerHTML = "<h1>Magic!</h1>"
 ```
 
