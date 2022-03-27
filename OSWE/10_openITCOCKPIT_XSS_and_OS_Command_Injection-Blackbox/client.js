@@ -1,5 +1,5 @@
-html_element = docuemnt.getElementsByTagName("html")[0]
-html_element.innerHTML = '<!DOCTYPE html>' /6:01/
+html_element = document.getElementsByTagName("html")[0]
+html_element.innerHTML = '<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> <meta name="viewport">            /6:01/
 
 var iframe = document.createElement('iframe'); 
 iframe.setAttribute("style","display:none") 
