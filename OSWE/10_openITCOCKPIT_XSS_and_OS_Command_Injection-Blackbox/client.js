@@ -6,7 +6,7 @@ iframe.setAttribute("style","display:none")
 iframe.onload = actions;
 iframe.width = "100%" 
 iframe.height = "100%" 
-iframe.src = "https://openitcockpit" 
+iframe.src = "https://192.168.100.44" 
 body = document.getElementsByTagName('body')[0];
 body.appendChild(iframe) 
 
