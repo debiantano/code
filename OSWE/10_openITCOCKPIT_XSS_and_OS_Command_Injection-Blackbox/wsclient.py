@@ -61,3 +61,4 @@ if __name__ == "__main__":
     ws = websocket.WebSocketApp(args.url, on_message = on_message, on_error = on_error, on_close = on_close, on_open = on_open)
     ws.run_forever(sslopt={"cert_reqs" : ssl.CERT_NONE})
 
+# d33e9b6887a26ae3b3d3020a7245cbb50846e984f49a8d08c67dcad0c58342d0edcf5e9c5bcfebf46ed920085becb6557d855a1e9be6d728f747baa7f226f199d2690a930a8e3c773d70e1002119fda7
