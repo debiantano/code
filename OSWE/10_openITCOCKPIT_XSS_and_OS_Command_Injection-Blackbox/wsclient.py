@@ -22,6 +22,19 @@ def on_message(ws, message):
         uniqid = mes["uniqid"] 
     print(mes)
 
+def on_message(ws, message): 
+    mes = json.loads(message) 
+    if "uniqid" in mes.keys():
+        uniqid = mes["uniqid"] 
+    if mes["type"] == "connection":
+        print("[+] Connected!") 
+    elif mes["type"] == "dispatcher":
+        pass
+    elif mes["type"] == "response":
+        print(mes["payload"], end = '') 
+    else:
+        print(mes)
+
 def on_error(wc, error):
     print(error)
     
