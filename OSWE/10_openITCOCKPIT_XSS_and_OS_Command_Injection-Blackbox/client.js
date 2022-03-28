@@ -24,10 +24,14 @@ Enlaces.
 
 function getContent(){ 
     allA = iframe.contentDocument.getElementsByTagName("a") 
-    allHrefs = [] 
+    allHrefs = []
+    
+    // OBTENER LOS EN LACES
     for (var i=0; i<allA.length; i++){ 
         allHrefs.push(allA[i].href)
     }
+    
+    // ENLACES UNICOS
     uniqueHrefs = _.unique(allHrefs)
     validUniqueHrefs = [] 
     for(var i=0; i<uniqueHrefs.length; i++) { 
