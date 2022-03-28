@@ -14,6 +14,10 @@ function actions(){
     setTimeout(function(){getContent() }, 5000);
 }
 
+// Complete el script creando la función validURL. La función debe devolver todos los válidos.
+//Las URL HTTP y HTTPS que no contienen ninguna palabra clave cerrarán la sesión de la víctima. Idealmente nosotros
+//solo querría apuntar al dominio en el que se está ejecutando XSS. Sin embargo, en este punto, estamos
+
 function getContent(){ 
     allA = iframe.contentDocument.getElementsByTagName("a") 
     allHrefs = [] 
