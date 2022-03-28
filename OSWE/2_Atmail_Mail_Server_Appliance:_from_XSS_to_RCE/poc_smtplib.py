@@ -1,7 +1,7 @@
 import smtplib
 
 sender_email = "cromozzc@gmail.com"
-rec_email = "richar.quispe@gmail.com"
+rec_email = "recv@gmail.com"
 password = input(str("> ")) 
 message = "Hola, este es un mensaje usando python"
 
