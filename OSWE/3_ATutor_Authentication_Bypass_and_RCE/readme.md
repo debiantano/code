@@ -33,28 +33,25 @@ sudo chmod 757 ./atutor/mods/
 
 ----
 
-#### Configurando el entorno MYSQL LOG
+#### MYSQL LOG
 ```bash
 student@atutor:~$ sudo nano /etc/mysql/my.cnf <> /etc/mysql/mariadb.conf.d/50-server.cnf
+[...]
 [mysqld]
 general_log_file = /var/log/mysql/mysql.log 
 general_log = 1
-
-student@atutor:~$ sudo systemctl restart mysql
-
+[...]
+[REINICIAR MYSQL]
 sudo tail –f /var/log/mysql/mysql.log
 ```
 
-Añadir al archivo ```/etc/php5/apache2/php.ini```
-```
+#### PHP LOG
+Editar `/etc/php5/apache2/php.ini`
+```bash
 [...]
 display_errors = On 
 [...]
-```
-
-Reinicar apache
-```
-student@atutor:~$ sudo systemctl restart apache2
+[REINICIAR APACHE]
 ```
 
 ----
