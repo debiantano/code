@@ -34,7 +34,7 @@ sudo chmod 757 ./atutor/mods/
 ----
 
 #### Configurando el entorno MYSQL LOG
-```
+```bash
 student@atutor:~$ sudo nano /etc/mysql/my.cnf <> /etc/mysql/mariadb.conf.d/50-server.cnf
 [mysqld]
 general_log_file = /var/log/mysql/mysql.log 
