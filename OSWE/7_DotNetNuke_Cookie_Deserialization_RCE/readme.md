@@ -12,8 +12,14 @@
 El enfoque principal del módulo estará dirigido al proceso de deserialización de `.Net`, y más específicamente en la clase XMLSerializer.
 
 #### Serializacion
-El concepto de serialización (y deserialización) existe en informática desde hace varios años. 
-años. Su propósito es convertir una estructura de datos en un formato que pueda almacenarse o transmitirse a través de un enlace de red para consumo futuro.
+El concepto de serialización (y deserialización) existe en informática desde hace varios años. Su propósito es convertir una estructura de datos en un formato que pueda almacenarse o transmitirse a través de un enlace de red para consumo futuro.
+
+
+### Serialization in C#
+- binary
+- xml
+- json
+- custom serialization
 
 #### Instancia de clase XmlSerializer
 ```
