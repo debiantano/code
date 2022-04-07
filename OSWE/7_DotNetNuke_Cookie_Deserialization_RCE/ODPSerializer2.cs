@@ -23,8 +23,7 @@ namespace ODPSerializer
             Hashtable table = new Hashtable();
             table["myTableEntry"] = myODP;
             String payload = "; DNNPersonalization=" + XmlUtils.SerializeDictionary(table, "profile");
-            TextWriter writer = new
-            StreamWriter("C:\\Users\\RICHAR\\Desktop\\test.txt");
+            TextWriter writer = new StreamWriter("C:\\Users\\RICHAR\\Desktop\\test.txt");
             writer.Write(payload);
             writer.Close();
             Console.WriteLine("Done!");
