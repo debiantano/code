@@ -70,7 +70,7 @@ nano /etc/vconsole.conf
 KEYMAP=es
 echo LANG=es_ES.UTF8 > /etc/locale.conf
 
-INSTALL GRUP
+# INSTALL GRUP
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 echo blackarch > /etc/hostname
@@ -79,7 +79,7 @@ nano /etc/hosts
 ::1	localhost
 127.0.0.1 blackarch
 
-NEOFETCH
+# NEOFETCH
 pacman -S neofetch
 
 exit
