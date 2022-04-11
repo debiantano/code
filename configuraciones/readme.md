@@ -2,6 +2,8 @@
 ```
 > sudo setxkbmap -layout 'es,es' -model pc105
 > setxkbmap latam
+----
+loadkeys la-latin1
 ```
 
 #### Cerrar sesion
