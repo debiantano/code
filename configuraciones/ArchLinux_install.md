@@ -140,6 +140,26 @@ pacman -Sgg | grep blackarch
 pacman -S impacket
 pacman -S blackarch-bluetooth // ejemplo
 
+# VIDEO
+pacman -S xf86-video-vesa
+
+# XORG MESA
+pacman -S xorg-server xorg-xinit mesa mesa-demos
+
+# QTILE LIGHTDM
+pacman -S lightdm lightdm-gtk-greeter
+nano /etc/lightdm/lightdm.conf (line 62 greeter-session=lightdm-gtk-greeter )
+systemctl enable lightdm.service
+
+# VMWARE TOOLS
+pacman -S open-vm-tools
+pacma -S xf86-video-vmware xf86-input-vmmouse
+systemctl enable vmtoolsd
+
+# QTILE
+pacman -S qtile xterm firefox rofi wich nitrogen
+pacman -S ttf-dejavu ttf-liberation noto-fonts
+
 INTERFAZ GRAFICA
 pacman -S xorg xorg-server
 pacman -S gnome
