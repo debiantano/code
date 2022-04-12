@@ -10,6 +10,10 @@ set-option -g prefix C-a
 # Empezar la numeración de las ventanas creadas en 1 (la primera ventana)
 set -g base-index 1
 
+# LAS NUEVAS VENTANAS RETIENEN LA RUTA ACTUAL
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
 
 #####################################################################################################
 # 173-color green Acuarela
