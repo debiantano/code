@@ -1,3 +1,5 @@
+# KERNEL LAPTOP 5.17.1-arch1-1
+
 # WIFI
 ip link
 ip link set wlp6s0 up
