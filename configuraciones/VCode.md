@@ -9,3 +9,6 @@ ctrl + s
 
 ## Buscar un archivo
 ctrl + mayus + f
+
+## Buscar por linea
+ctrl + g
