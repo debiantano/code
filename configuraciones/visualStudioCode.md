@@ -6,3 +6,6 @@ barra de derecha de code
 
 ## Guardar cambios
 ctrl + s
+
+## Buscar un archivo
+ctrl + mayus + f
