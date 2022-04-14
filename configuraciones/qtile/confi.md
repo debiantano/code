@@ -1,4 +1,5 @@
-# KERNEL LAPTOP 5.17.1-arch1-1 
+# DE FLOTANTE REGRESE A NO FLOTANTE
+# ABRIR UNA APLICACION EN UN DETERMINADO PANEL
 
 # WIFI
 ip link
@@ -71,4 +72,11 @@ Could not start Burp: java.lang.NullPointerException
 set _JAVA_AWT_WM_NONREPARENTING=1 in /etc/profile.d/jre.sh
 [no solucionado]
 
-pacman -S flameshot
+pacman -S man steghide cherrytree
+
+# BURP SOLUCION
+DESCARGAR BURP 2021.12.1 (releases portswiger)
+
+# SCREESHOT
+scrot
+fzf github
