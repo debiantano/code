@@ -1,4 +1,4 @@
-# KERNEL LAPTOP 5.17.1-arch1-1
+# KERNEL LAPTOP 5.17.1-arch1-1 
 
 # WIFI
 ip link
