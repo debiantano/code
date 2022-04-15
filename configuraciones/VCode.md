@@ -12,3 +12,6 @@ ctrl + mayus + f
 
 ## Buscar por linea
 ctrl + g
+
+## Dar formato a l codigo
+xtrl + shift + p (format)
