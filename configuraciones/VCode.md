@@ -15,3 +15,6 @@ ctrl + g
 
 ## Dar formato a l codigo
 xtrl + shift + p (format)
+
+## nowrap
+ajuste de palabra
