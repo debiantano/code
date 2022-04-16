@@ -28,7 +28,6 @@ keys = [
     Key([mod, "control"], "Right", lazy.layout.grow_right(), desc="Grow window to the right"),
     Key([mod, "control"], "Down", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
 
     # ATAJOS
     # abrir terminal
@@ -48,19 +47,21 @@ keys = [
     # lanzar rofi
     Key([mod], "d", lazy.spawn("rofi -show run"), desc="Launch Rofi"),
     # desactivar modo flotante
-    Key([mod], "r", lazy.window.toggle_floating(), desc="mode floating disable"),
+    Key([mod], "f", lazy.window.toggle_floating(), desc="mode floating disable"),
     # Screenshot en clipboard
     Key([mod, "shift"], "Print", lazy.spawn("scrot \"test.png\" -s -e 'xclip -selection clipboard -t image/png -i $f && rm test.png'")),
     # Screenshot guardado en dir. actual
-    Key([mod], "Print", lazy.spawn("scrot archLinux-%d-%H-%S.png -e 'mv *.png /home/noroot/Images/screenShots'"))
+    Key([mod], "Print", lazy.spawn("scrot archLinux-%d-%H-%S.png -e 'mv *.png /home/noroot/Images/screenShots'")),
+    # Mostrar IP
+    Key([mod], "i", lazy.spawn('bash -c \"zenity --info --text=$(/usr/bin/cat /home/noroot/.config/qtile/ip_machine.txt) --ok-label=\"ok\" 2>/dev/null\"'))
 ]
 
 # PROGRAMAS EN DETERMINADO WORKSPACE
 groups = [
 	Group("  "),
 	Group("  ", matches=[Match(wm_class=["Navigator"])]),
-	Group("  ", matches=[Match(wm_class=["burp-StartBurp","cherrytree"])]),
-	Group("  ", matches=[Match(wm_class=["Thunar","code-oss"])]),
+	Group("  ", matches=[Match(wm_class=["burp-StartBurp","cherrytree", "code-oss"])]),
+	Group("  ", matches=[Match(wm_class=["Thunar"])]),
 	Group("  "),
 	Group("  "),
 	Group("  "),
@@ -81,9 +82,10 @@ for i, group in enumerate(groups):
 layouts = [
      layout.Columns(
          border_focus="#d70000",
-         single_border_width=0, # no enfocar si hay un panel
+#         single_border_width=0, # no enfocar si hay un panel
+         margin_on_single=10,
          border_width=2,	# grosor del contorno
-         margin=10)	# size gaps
+         margin=5)	# size gaps
 ]
 
 # BAR QTILE CONF
@@ -250,7 +252,9 @@ floating_layout = layout.Floating(
     float_rules=[
         *layout.Floating.default_float_rules,
         Match(wm_class="burp-StartBurp"),  # xprop WM_CLASS
-        Match(wm_class="feh")
+        Match(wm_class="feh"),
+        Match(wm_class="tk"),
+        Match(wm_class="zenity")
     ]
 )
 
