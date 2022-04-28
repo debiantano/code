@@ -1,35 +1,71 @@
-#source ~/powerlevel10k/powerlevel10k.zsh-theme
-source /home/noroot/km4l30n/tools/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#PATH
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/go/bin:/home/noroot/.local/bin
-
-#export PATH=$PATH:/usr/local/go/bin
 
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Set up the prompt
+
+autoload -Uz promptinit
+promptinit
+prompt adam1
+
+setopt histignorealldups sharehistory
+
+# Use emacs keybindings even if our EDITOR is set to vi
+bindkey -e
+
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000
+SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+# Use modern completion system
+autoload -Uz compinit
+compinit
 
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+# Manual configuration
+
+# Manual aliases
+alias ls='lsd --group-dirs=first'
+alias cat='bat'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Plugins
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-sudo/sudo.plugin.zsh
+
+# Functions
 function mkt(){
-	mkdir {enumeration,Exploitation,PrivEsc}
-	echo -e "ENUMERACION\n\nEXPLOTACION\n\nESCALADA DE PRIVILEGIOS\n\nFLAGS\n\n" > credential.txt
+	mkdir {nmap,content,scripts}
 }
-
-
-alias interactiveShell='python /home/noroot/km4l30n/python_scripting/interactiveShell.py'
-alias cat='/usr/bin/bat'
-alias catn='/usr/bin/cat'
-alias ls='/usr/bin/lsd'
-alias burpPro='pushd /home/noroot/Escritorio/burpSuite\ Professional && /usr/lib/jvm/java-11-openjdk-amd64/bin/java --illegal-access=permit -Dfile.encoding=utf-8 -javaagent:BurpSuiteLoader_v2020.7.jar -noverify -jar burpsuite_pro_v2020.7.jar >/dev/null 2>&1 &; popd'
-
 
 # Set 'man' colors
 function man() {
@@ -51,25 +87,43 @@ function monitorInit(){
 	macchanger -a > /dev/null 2>&1
 	ifconfig wlan0mon up
 }
+# fzf improvement
+function fzf-lovely(){
 
-# Extract nmap information
+	if [ "$1" = "h" ]; then
+		fzf -m --reverse --preview-window down:20 --preview '[[ $(file --mime {}) =~ binary ]] &&
+ 	                echo {} is a binary file ||
+	                 (bat --style=numbers --color=always {} ||
+	                  highlight -O ansi -l {} ||
+	                  coderay {} ||
+	                  rougify {} ||
+	                  cat {}) 2> /dev/null | head -500'
 
-function extractPorts(){
-	ports="$(/usr/bin/cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
-	ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
-	echo -e "\n[*] Extracting information...\n" > extractPorts.tmp
-	echo -e "\t[*] IP Address: $ip_address"  >> extractPorts.tmp
-	echo -e "\t[*] Open ports: $ports\n"  >> extractPorts.tmp
-	echo $ports | tr -d '\n' | xclip -sel clip
-	echo -e "[*] Ports copied to clipboard\n"  >> extractPorts.tmp
-	cat extractPorts.tmp; rm extractPorts.tmp
+	else
+	        fzf -m --preview '[[ $(file --mime {}) =~ binary ]] &&
+	                         echo {} is a binary file ||
+	                         (bat --style=numbers --color=always {} ||
+	                          highlight -O ansi -l {} ||
+	                          coderay {} ||
+	                          rougify {} ||
+	                          cat {}) 2> /dev/null | head -500'
+	fi
 }
 
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+function rmk(){
+	scrub -p dod $1
+	shred -zun 10 -v $1
+}
+function settarget(){
+	ip_addr=$1
+	echo "$ip_addr" > /home/noroot/.config/qtile/ip_machine.txt
+}
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[4~" end-of-line
+bindkey "^[[3~" delete-char
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
+source ~/Desktop/powerlevel10k/powerlevel10k.zsh-theme
