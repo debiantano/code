@@ -14,7 +14,10 @@ ctrl + mayus + f
 ctrl + g
 
 ## Dar formato a l codigo
-xtrl + shift + p (format)
+ctrl + shift + p (format)
 
 ## nowrap
-ajuste de palabra
+alt + z
+
+## COmentar
+ctrl + k + u [WINDOWS]
