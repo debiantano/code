@@ -46,7 +46,7 @@ systemctl start httpd
 oadModule mpm_prefork_module modules/mod_mpm_prefork.so
 oadModule php_module modules/libphp.so
 ddHandler php-script php
-nclude conf/extra/php_module.conf
+include conf/extra/php_module.conf
 
 # LIGHTDM
 sudo pacman -S lightdm-gtk-greeter-settings
