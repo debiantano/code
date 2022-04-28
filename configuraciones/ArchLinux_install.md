@@ -73,7 +73,7 @@ nano /etc/sudoers
 # ZONA HORARIA
 ```
 timedatectl list-timezones | less (America/Lima)
-ln -sf /usr/share/zoneinfo/America/Lima 7etc/localtime
+ln -sf /usr/share/zoneinfo/America/Lima /etc/localtime
 ```
 
 ```
