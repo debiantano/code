@@ -2,7 +2,7 @@ from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
-import os
+import os 
 
 mod = "mod4"
 terminal = "gnome-terminal"
