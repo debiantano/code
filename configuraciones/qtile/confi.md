@@ -161,3 +161,8 @@ archlinux-java status
 archlinux-java set java-17-openjdk
 DESCARGAR BURP 2021.12.1 (releases portswiger
 
+[LIGHTDM]
+pacman -S lightdm-gtk-greeter-settings
+/etc/lightdm/ (images)
+CSS: /usr/share/themes/Default/gtk-3/gtk.css
+
