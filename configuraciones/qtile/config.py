@@ -1,3 +1,12 @@
+'''
+> nano /usr/share/xession/qtile.desktop
+[Desktop Entry]
+Name=Qtile
+Comment=Qtile Session
+Exec=qtile start
+Type=Application
+Keywords=wm;tiling
+'''
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
