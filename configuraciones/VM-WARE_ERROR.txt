@@ -9,3 +9,13 @@ CCMWP-99T99-KCY96-FGKBW-F9WJT
 
 win7
 KKQFK-89TGP-J4W4X-3XPCG-CQRYW
+
+----
+
+Esta fuerza la entrada a la configuración del BIOS en el inicio
+bios.forceSetupOnce = "TRUE"
+bios.bootDelay = "xxxx"
+
+F2  -> SETUP
+F12 -> Network Boot
+ESC -> Boot Menu
