@@ -1,3 +1,6 @@
+## Seleccionar repeticion
+ctrl + d
+
 ## show dtatus bar
 barra inferir de vcode
 
