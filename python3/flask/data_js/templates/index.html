@@ -1,0 +1,6 @@
+<p>Hello, <span id="username"></span></p>
+<script>
+    var user = JSON.parse('{{ user | tojson | safe}}');
+    document.getElementById('username').innerHTML = user.firstname + " " +
+            user.lastname;
+</script>
