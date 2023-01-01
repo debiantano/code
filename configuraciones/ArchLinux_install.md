@@ -114,13 +114,16 @@ reboot now
 ```
 
 # RED
+```
 systemctl start NetworkManager
 systemctl enable NetworkManager
 ping 8.8.8.8
 systemctl start wpa_supplicant.service
 systemctl enable wpa_supplicant.service
+```
 
 # AUR
+```
 pacman -S git
 [como noroot]
 mkdir -p Desktop/repos
@@ -128,8 +131,10 @@ cd !$
 git clone https://aur.archlinux/paru-bin.git
 cd [tab]
 makepkg -si
+```
 
 # BLACK_ARCH
+```
 [directorio repos]
 mkdir blackarch
 cd !$
@@ -139,46 +144,66 @@ pacman -Sy
 pacman -Sgg | grep blackarch
 pacman -S impacket
 pacman -S blackarch-bluetooth // ejemplo
+```
 
 # VIDEO
+```
 pacman -S xf86-video-vesa
+```
 
 # XORG MESA
+```
 pacman -S xorg-server xorg-xinit mesa mesa-demos
+```
 
 # QTILE LIGHTDM
+```
 pacman -S lightdm lightdm-gtk-greeter
 nano /etc/lightdm/lightdm.conf (line 62 greeter-session=lightdm-gtk-greeter )
 systemctl enable lightdm.service
+```
 
 # VMWARE TOOLS
+```
 pacman -S open-vm-tools
 pacma -S xf86-video-vmware xf86-input-vmmouse
 systemctl enable vmtoolsd
+```
 
 # QTILE
+```
 pacman -S qtile xterm firefox rofi wich nitrogen
 pacman -S ttf-dejavu ttf-liberation noto-fonts
+```
 
-INTERFAZ GRAFICA
+# INTERFAZ GRAFICA
+```
 pacman -S xorg xorg-server
 pacman -S gnome
+```
 
+```
 systemctl start gdm.service
 systemctl enable gdm.service
 pacman -S kitty
+```
 
-VMWARE TOOLS
+# VMWARE TOOLS
+```
 pacman -S gtkmm
 pacman -S open-vm-tools
 pacman -S xf86-video-vmware xf86-input-vmmouse
 systemctl enable vmtoolsd
 reboot now
 
-FONTS
+```
+
+# FONTS
+```
 wget http://fontlot.com/downfile/5baeb08d06494fc84dbe36210f6f0ad5.105610
 https://dropbox.com/s/hrkub2yo9iapljz/icommon.zip?dl=0
 paru -S nerd-fonts-jetbrains-mono ttf-font-awesome ttf-font-awesome-4 ttf-material-design-icons
+```
 
 
 
