@@ -1,5 +1,7 @@
 # CONFIGURAR IDIOMA TECLADO
+```
 loadkeys la-latin1
+```
 
 # WIFI
 ```
