@@ -22,7 +22,7 @@ echo "W0Rlc2t0b3AgRW50cnldCk5hbWU9UXRpbGUKQ29tbWVudD1RdGlsZSBTZXNzaW9uCkV4ZWM9cX
 sudo mv qtile.desktop /usr/share/xsessions
 
 # APT
-sudo apt install gnome-terminal feh rofi xclip neofetch -y
+sudo apt install gnome-terminal feh rofi xclip neofetch grc -y
 
 wget "https://wallpapercave.com/wp/wp1810645.jpg" -O $HOME/.config/qtile/wallpaper.png
 
