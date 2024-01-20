@@ -29,7 +29,7 @@ lsblk
 
 # FORMATEAR LAS PARTICIONES
 ```
-mkfs.vfat -F 32 /dev/sda1
+mkfs.vfat -F 32 /dev/sda1 (fileSystem booteable)
 mkfs.ext4 /dev/sda2
 mkswap /dev/sda3
 swapon
