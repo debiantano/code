@@ -25,7 +25,7 @@ latinoAmerica
 No compose key
 ```
 
-### Error hey
+### Brillo
 ```
 xrandr --current | awk 'NR==3 {print $1}' // HDMI-1
 xrandr --output HDMI-1 --brightness 0.9
