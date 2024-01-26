@@ -27,5 +27,6 @@ No compose key
 
 ### Error hey
 ```
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <ERROR> 
+xrandr --current | awk 'NR==3 {print $1}' // HDMI-1
+xrandr --output HDMI-1 --brightness 0.9
 ```
