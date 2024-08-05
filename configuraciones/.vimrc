@@ -9,7 +9,8 @@ set encoding=utf-8
 set nu
 "colo murphy
 "colo pablo
-colo industry
+"colo industry
+colo evening
 "colo delek
 set autoindent
 	
